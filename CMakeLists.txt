@@ -7,6 +7,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 # Set build type
 set(CMAKE_BUILD_TYPE Debug)
 
+# Import opencv 
+find_package(OpenCV 3.3.0 REQUIRED)
+
 # We probably don't want this to run on every build.
 option(COVERAGE "Generate Coverage Data" OFF)
 
