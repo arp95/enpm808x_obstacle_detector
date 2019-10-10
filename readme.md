@@ -12,7 +12,7 @@ Simple starter C++ project with:
 
 ## Standard install via command-line
 ```
-git clone --recursive https://github.com/dpiet/cpp-boilerplate
+git clone --recursive https://github.com/arp95/enpm808x_obstacle_detector.git
 cd <path to repository>
 mkdir build
 cd build
