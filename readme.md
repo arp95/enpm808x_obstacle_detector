@@ -1,6 +1,7 @@
 # Obstacle Detection using YOLO v3
 [![Build Status](https://travis-ci.org/arp95/enpm808x_obstacle_detector.svg?branch=master)](https://travis-ci.org/arp95/enpm808x_obstacle_detector)
 [![Coverage Status](https://coveralls.io/repos/github/arp95/enpm808x_obstacle_detector/badge.svg?branch=master)](https://coveralls.io/github/arp95/enpm808x_obstacle_detector?branch=master)
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](LICENSE.md)
 ---
 
 ## Overview
