@@ -7,9 +7,15 @@
  */
 
 #include <iostream>
+#include <Utils.h>
 
 class YOLOv3 {
  private:
+  /**
+   * @brief private variable for Utils class.
+   */
+  Utils utils;
+
   /**
    * @brief private variable for confThreshold.
    */
@@ -39,7 +45,7 @@ class YOLOv3 {
   /**
    * @brief  constructor for YOLOv3 class with four parameters.
    */
-  YOLOv3(double confThresholdValue, double nmsThresholdValue, double inputWidthValue, double inputHeightValue);
+  YOLOv3(double confThresholdValue, double nmsThresholdValue, int inputWidthValue, int inputHeightValue);
 
   /**
    * @brief  sets the confThreshold value.
@@ -102,20 +108,27 @@ class YOLOv3 {
    * @param  two parameters, one is frame image and the other is outputs vector.
    * @return type void.
    */
-  void postprocess(Mat& frame, const vector<Mat>& outputs);
+  void postprocess(cv::Mat& frame, const std::vector<cv::Mat>& outputs);
 
   /**
-   * @brief  postprocessing of the output of yolov3 with nms algorithm.
-   * @param  two parameters, one is frame image and the other is outputs vector.
-   * @return type void.
-   */
-  void postprocess(Mat& frame, const vector<Mat>& outputs);
-
-  /**
-   * @brief  draws bounding box given the coordinates on the image.
+   * @brief  draws bounding box given the coordinates.
    * @param  seven parameters, one is classId, confidence, left, top, right, bottom and frame image.
    * @return type void.
    */
-  void drawBoundingBox(int classId, float confidence, int left, int top, int right, int bottom, Mat& frame)
+  void drawBoundingBox(int classId, float confidence, int left, int top, int right, int bottom, cv::Mat& frame);
+
+  /**
+   * @brief  forward pass in YOLOv3 network.
+   * @param  one parameter, input frame.
+   * @return type vector<cv::Mat>.
+   */
+  std::vector<cv::Mat> run(cv::Mat& frame);
+
+  /**
+   * @brief  get names of output layers of the network.
+   * @param  one parameter, which is the cv::dnn::net.
+   * @return type vector<std::string>.
+   */
+  std::vector<std::string> getOutputLayerNames(const cv::dnn::Net& net);
 };
 #endif  // INCLUDE_YOLOv3_H_
