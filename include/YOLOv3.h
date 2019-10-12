@@ -34,7 +34,7 @@ class YOLOv3 {
   /**
    * @brief private variable for storing inputHeight.
    */
-  double inputHeight;
+  int inputHeight;
 
  public:
   /**
