@@ -12,19 +12,24 @@
 class Utils {
  private:
   /**
+   * @brief private variable for classes.
+   */
+  std::vector<std::string> classes;
+
+  /**
    * @brief private variable for classesFile.
    */
-  string classesFile;
+  std::string classesFile;
 
   /**
    * @brief private variable for modelConfiguration.
    */
-  string modelConfiguration;
+  std::string modelConfiguration;
 
   /**
    * @brief private variable for modelWeights.
    */
-  string modelWeights;
+  std::string modelWeights;
 
  public:
   /**
@@ -37,20 +42,34 @@ class Utils {
    * @param  no parameter.
    * @return type string.
    */
-  string getClassesFile();
+  std::string getClassesFile();
 
   /**
    * @brief  returns the modelConfiguration value.
    * @param  no parameter.
    * @return type string.
    */
-  string getModelConfiguration();
+  std::string getModelConfiguration();
 
   /**
    * @brief  returns the modelWeights value.
    * @param  no parameter.
    * @return type string.
    */
-  string getModelWeights();
+  std::string getModelWeights();
+
+  /**
+   * @brief  adds classes in vector<string>.
+   * @param  no parameter.
+   * @return type void.
+   */
+  void addClasses();
+
+  /**
+   * @brief  returns classes of type vector<string>.
+   * @param  no parameter.
+   * @return type std::vector<std::string>.
+   */
+  std::vector<std::string> getClasses();
 };
 #endif  // INCLUDE_Utils_H_

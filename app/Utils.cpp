@@ -18,20 +18,32 @@ Utils::Utils() {
 /**
  * Get classesFile from Utils.
  */
-string Utils::getClassesFile() {
+std::string Utils::getClassesFile() {
   return classesFile;
 }
 
 /**
  * Get modelConfiguration from Utils.
  */
-string Utils::getModelConfiguration() {
+std::string Utils::getModelConfiguration() {
   return modelConfiguration;
 }
 
 /**
  * Get modelWeights from Utils.
  */
-string Utils::getModelWeights() {
+std::string Utils::getModelWeights() {
   return modelWeights;
+}
+
+/**
+ * Adds classes in vector<string>.
+ */
+void Utils::addClasses() {
+}
+
+/**
+ * Returns classes of type vector<string>.
+ */
+std::vector<std::string> Utils::getClasses() {
 }
