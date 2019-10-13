@@ -8,14 +8,14 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 set(CMAKE_BUILD_TYPE Debug)
 
 # Import opencv 
-find_package(OpenCV 4.0.0 REQUIRED)
+find_package(OpenCV 3.3.1 REQUIRED)
 #include opencv directories
-include_directories(${OpenCV_INCLUDE_DIRS})
+#include_directories(${OpenCV_INCLUDE_DIRS})
 
 #display opencv include directory
-message( [opencv] ${OpenCV_INCLUDE_DIRS} )
-message( [opencv] ${${OpenCV_LIBS}} )
-message( [opencv] ${${OpenCV_LIBRARIES}} )
+#message( [opencv] ${OpenCV_INCLUDE_DIRS} )
+#message( [opencv] ${${OpenCV_LIBS}} )
+#message( [opencv] ${${OpenCV_LIBRARIES}} )
 
 # We probably don't want this to run on every build.
 option(COVERAGE "Generate Coverage Data" OFF)

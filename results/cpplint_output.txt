@@ -1,0 +1,12 @@
+Done processing include/Foo.h
+include/Utils.h:81:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing include/Utils.h
+include/YOLOv3.h:50:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing include/YOLOv3.h
+Done processing app/Foo.cpp
+Done processing app/main.cpp
+app/Utils.cpp:51:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing app/Utils.cpp
+app/YOLOv3.cpp:21:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing app/YOLOv3.cpp
+Total errors found: 4
