@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <opencv2/opencv.hpp>
 
 class Utils {
  private:
@@ -78,6 +79,7 @@ class Utils {
    * @param  seven parameters, one is classId, confidence, left, top, right, bottom and frame image.
    * @return type void.
    */
-  void drawBoundingBox(int classId, float confidence, int left, int top, int right, int bottom, const cv::Mat& frame);
+  void drawBoundingBox(int classId, float confidence, int left, int top,
+                       int right, int bottom, const cv::Mat & frame);
 };
 #endif  // INCLUDE_UTILS_H_
