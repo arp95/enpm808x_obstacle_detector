@@ -1,5 +1,5 @@
-#ifndef INCLUDE_YOLOv3_H_
-#define INCLUDE_YOLOv3_H_
+#ifndef INCLUDE_YOLOV3_H_
+#define INCLUDE_YOLOV3_H_
 
 /* Copyright 2019 Arpit Aggarwal, Shantam Bajpai
  * @file YOLOv3.h
@@ -7,6 +7,8 @@
  */
 
 #include <iostream>
+#include <string>
+#include <vector>
 #include <Utils.h>
 
 class YOLOv3 {
@@ -108,14 +110,14 @@ class YOLOv3 {
    * @param  two parameters, one is frame image and the other is outputs vector.
    * @return type void.
    */
-  void postprocess(cv::Mat& frame, const std::vector<cv::Mat>& outputs);
+  void postprocess(const cv::Mat& frame, const std::vector<cv::Mat>& outputs);
 
   /**
    * @brief  forward pass in YOLOv3 network.
    * @param  one parameter, input frame.
    * @return type vector<cv::Mat>.
    */
-  std::vector<cv::Mat> run(cv::Mat& frame);
+  std::vector<cv::Mat> run(const cv::Mat& frame);
 
   /**
    * @brief  get names of output layers of the network.
@@ -124,4 +126,4 @@ class YOLOv3 {
    */
   std::vector<std::string> getOutputLayerNames(const cv::dnn::Net& net);
 };
-#endif  // INCLUDE_YOLOv3_H_
+#endif  // INCLUDE_YOLOV3_H_

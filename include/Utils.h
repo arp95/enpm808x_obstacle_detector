@@ -1,5 +1,5 @@
-#ifndef INCLUDE_Utils_H_
-#define INCLUDE_Utils_H_
+#ifndef INCLUDE_UTILS_H_
+#define INCLUDE_UTILS_H_
 
 /* Copyright 2019 Arpit Aggarwal, Shantam Bajpai
  * @file Utils.h
@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 class Utils {
  private:
@@ -77,6 +78,6 @@ class Utils {
    * @param  seven parameters, one is classId, confidence, left, top, right, bottom and frame image.
    * @return type void.
    */
-  void drawBoundingBox(int classId, float confidence, int left, int top, int right, int bottom, cv::Mat& frame);
+  void drawBoundingBox(int classId, float confidence, int left, int top, int right, int bottom, const cv::Mat& frame);
 };
-#endif  // INCLUDE_Utils_H_
+#endif  // INCLUDE_UTILS_H_

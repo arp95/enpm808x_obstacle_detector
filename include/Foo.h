@@ -1,5 +1,5 @@
-#ifndef INCLUDE_Foo_H_
-#define INCLUDE_Foo_H_
+#ifndef INCLUDE_FOO_H_
+#define INCLUDE_FOO_H_
 
 /* Copyright 2019 Arpit Aggarwal, Shantam Bajpai
  * @file Foo.h
@@ -68,4 +68,4 @@ class Foo {
    */
   void processVideo(std::string path);
 };
-#endif  // INCLUDE_Foo_H_
+#endif  // INCLUDE_FOO_H_
