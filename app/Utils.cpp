@@ -19,21 +19,18 @@ Utils::Utils() {
  * Get classesFile from Utils.
  */
 std::string Utils::getClassesFile() {
-  return classesFile;
 }
 
 /**
  * Get modelConfiguration from Utils.
  */
 std::string Utils::getModelConfiguration() {
-  return modelConfiguration;
 }
 
 /**
  * Get modelWeights from Utils.
  */
 std::string Utils::getModelWeights() {
-  return modelWeights;
 }
 
 /**
@@ -46,4 +43,10 @@ void Utils::addClasses() {
  * Returns classes of type vector<string>.
  */
 std::vector<std::string> Utils::getClasses() {
+}
+
+/**
+ * Draws bounding box given the coordinates.
+ */
+void Utils::drawBoundingBox(int classId, float confidence, int left, int top, int right, int bottom, cv::Mat& frame) {
 }

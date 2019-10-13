@@ -111,13 +111,6 @@ class YOLOv3 {
   void postprocess(cv::Mat& frame, const std::vector<cv::Mat>& outputs);
 
   /**
-   * @brief  draws bounding box given the coordinates.
-   * @param  seven parameters, one is classId, confidence, left, top, right, bottom and frame image.
-   * @return type void.
-   */
-  void drawBoundingBox(int classId, float confidence, int left, int top, int right, int bottom, cv::Mat& frame);
-
-  /**
    * @brief  forward pass in YOLOv3 network.
    * @param  one parameter, input frame.
    * @return type vector<cv::Mat>.

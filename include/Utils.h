@@ -71,5 +71,12 @@ class Utils {
    * @return type std::vector<std::string>.
    */
   std::vector<std::string> getClasses();
+
+  /**
+   * @brief  draws bounding box given the coordinates.
+   * @param  seven parameters, one is classId, confidence, left, top, right, bottom and frame image.
+   * @return type void.
+   */
+  void drawBoundingBox(int classId, float confidence, int left, int top, int right, int bottom, cv::Mat& frame);
 };
 #endif  // INCLUDE_Utils_H_

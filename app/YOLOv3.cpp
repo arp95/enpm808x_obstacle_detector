@@ -76,12 +76,6 @@ void YOLOv3::postprocess(cv::Mat& frame, const std::vector<cv::Mat>& outputs) {
 }
 
 /**
- * Draws bounding box given the coordinates.
- */
-void YOLOv3::drawBoundingBox(int classId, float confidence, int left, int top, int right, int bottom, cv::Mat& frame) {
-}
-
-/**
  * Forward pass in YOLOv3 network.
  */
 std::vector<cv::Mat> YOLOv3::run(cv::Mat& frame) {
