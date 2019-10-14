@@ -9,7 +9,8 @@
 For a robot to navigate autonomously in a given region it should have the capability to efficiently detect and avoid the obstacles that might come in its path. In this projecct we have developed a real time object detection classifier for ACME Robotics. The output obtained by the module can be used by the path planning component of the robotic system. 
 The YOLOv3 object detector algorithm has been used for this on a pre-trained COCO Dataset.
 
-##Dependencies
+## Dependencies
+
 [![OpenCV Installation](https://img.shields.io/badge/OpenCV-Clickhere-brightgreen.svg?style=flat)](https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html)
 
 ## Standard install via command-line
