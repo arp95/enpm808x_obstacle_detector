@@ -32,6 +32,13 @@ class Foo {
    * @brief  constructor for Foo class with no parameters.
    */
   Foo();
+  /**
+   * @brief  Sets the isImage value.
+   * @param  no parameter.
+   * @return type bool.
+   */
+
+  void setIsImage(bool isImage);
 
   /**
    * @brief  returns the isImage value.
@@ -41,10 +48,19 @@ class Foo {
   bool getIsImage();
 
   /**
+   * @brief  Sets the isVideo value.
+   * @param  no parameter.
+   * @return type bool.
+   */
+
+  void setIsVideo(bool isVideo);
+
+  /**
    * @brief  returns the isVideo value.
    * @param  no parameter.
    * @return type bool.
    */
+
   bool getIsVideo();
 
   /**

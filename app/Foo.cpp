@@ -15,31 +15,47 @@ Foo::Foo() {
 }
 
 /**
- * Returns the isImage value.
+ * @brief: Sets the isImage value.
  */
+
+void Foo::setIsImage(bool isImage) {
+
+}
+
+/**
+ * @brief: Returns the isImage value.
+ */
+
 bool Foo::getIsImage() {
 }
 
 /**
- * Returns the isVideo value.
+ * @brief: Returns the isImage value.
+ */
+
+void Foo::setIsVideo(bool isVideo) {
+
+}
+/**
+ * @brief: Returns the isVideo value.
  */
 bool Foo::getIsVideo() {
 }
 
 /**
- *  Updates the isVideo and isImage value.
+ * @brief: Updates the isVideo and isImage value.
  */
 void Foo::checkParser() {
 }
 
 /**
- *  Processes the image and updates the image with bounding boxes.
+ * @brief: Processes the image and updates the image with bounding boxes.
  */
 void Foo::processImage(std::string path) {
 }
 
 /**
- *  Processes the video and updates the video frames with bounding boxes.
+ * @brief: Processes the video and updates the video frames with bounding boxes.
  */
 void Foo::processVideo(std::string path) {
 }

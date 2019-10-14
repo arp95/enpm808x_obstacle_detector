@@ -16,7 +16,10 @@
 #include <YOLOv3.h>
 
 YOLOv3 yv3(1, 1, 1, 1);
+Foo f;
+Utils Util;
 double val;
+int val1;
 
 /**
  * @brief Test case for setConfThreshold method of YOLOv3 class. The
@@ -48,7 +51,7 @@ TEST(checkGetterSetter , checknmsThreshold) {
 
 TEST(checkGetterSetter , checkInputWidth) {
   yv3.setInputWidth(val);
-  EXPECT_EQ(yv3.getNmsThreshold(), val);
+  EXPECT_EQ(yv3.getInputWidth(), val1);
 }
 
 /**
@@ -59,6 +62,25 @@ TEST(checkGetterSetter , checkInputWidth) {
 
 TEST(checkGetterSetter , checkInputHeight) {
   yv3.setInputHeight(val);
-  EXPECT_EQ(yv3.getNmsThreshold(), val);
+  EXPECT_EQ(yv3.getInputHeight(), val1);
 }
 
+/**
+ * @brief Test case for getIsImage method of Foo class. The
+ * test checks whether the boolean value for getIsImage method.
+ */
+
+TEST(checkBoolSetterGetter , checkIsImage) {
+  f.setIsImage(0);
+  EXPECT_EQ(f.getIsImage(), 0);
+}
+
+/**
+ * @brief Test case for getIsVideo method of Foo class. The
+ * test checks whether the boolean value for getIsImage method.
+ */
+
+TEST(checkBoolSetterGetter , checkIsVideo) {
+  f.setIsVideo(1);
+  EXPECT_EQ(f.getIsVideo(), 1);
+}
