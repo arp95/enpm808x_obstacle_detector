@@ -14,6 +14,7 @@
 #include <Foo.h>
 #include <Utils.h>
 #include <YOLOv3.h>
+#include <opencv2/opencv.hpp>
 
 YOLOv3 yv3(1, 1, 1, 1);
 Foo f;
