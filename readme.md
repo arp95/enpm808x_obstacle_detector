@@ -4,12 +4,24 @@
 [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](LICENSE.md)
 ---
 
-## Overview
+## About the Authors
 
-Simple starter C++ project with:
+Shantam Bajpai: I am a first year graduate student pursuing my masters degree in Robotics from the University of Maryland , College Park. Prior to joining University of Maryland I completed my undergraduate in Electrical and Electronics Engineering from Vellore Institute of Technology, Vellore.
 
-- cmake
-- googletest
+Arpit Aggarwal: I am s first year graduate student pursuing my masters degree in Robotics from the University of Maryland , College Park.
+
+## Overview of the project
+
+For a robot to navigate autonomously in a given region it should have the capability to efficiently detect and avoid the obstacles that might come in its path. In this projecct we will develop a real time object detection classifier for ACME Robotics. The output obtained by the module can be used by the path planning component of the robotic system. 
+The YOLOv3 object detector algorithm will be used for this on a pre-trained COCO Dataset.
+	1. The module will take an nxn sized input image / video frames and will preprocess each image/frame and convert it 
+	   into a blob.
+	2. The output blob will then be passed as an input to the pre-trained YOLOv3 algorithm which will return a list of 	   bounding boxes for the input image.
+	3. After the output is obtained it will postprocessed and the boxes with low confidence scores will be suppressed
+	   using non max suppresion.
+
+## Dependencies
+[![OpenCV Installation](https://img.shields.io/badge/OpenCV4.0.0-Clickhere-brightgreen.svg?style=flat)](https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html)
 
 ## Standard install via command-line
 ```
@@ -23,15 +35,6 @@ Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
 
-## Building for code coverage (for assignments beginning in Week 4)
-```
-sudo apt-get install lcov
-cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
-make
-make code_coverage
-```
-This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
-
 ## Working with Eclipse IDE ##
 
 ## Installation
@@ -40,88 +43,18 @@ In your Eclipse workspace directory (or create a new one), checkout the repo (an
 ```
 mkdir -p ~/workspace
 cd ~/workspace
-git clone --recursive https://github.com/dpiet/cpp-boilerplate
+git clone --recursive https://github.com/arp95/enpm808x_obstacle_detector.git
+
 ```
 
 In your work directory, use cmake to create an Eclipse project for an [out-of-source build] of cpp-boilerplate
 
 ```
 cd ~/workspace
-mkdir -p boilerplate-eclipse
-cd boilerplate-eclipse
-cmake -G "Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D CMAKE_ECLIPSE_VERSION=4.7.0 -D CMAKE_CXX_COMPILER_ARG1=-std=c++14 ../cpp-boilerplate/
+mkdir -p enpm808x_build
+cd enpm808x_build
+cmake -G  "Eclipse CDT4 - Unix Makefiles" ../enpm808x_obstacle_detector/
+
 ```
-
-## Import
-
-Open Eclipse, go to File -> Import -> General -> Existing Projects into Workspace -> 
-Select "boilerplate-eclipse" directory created previously as root directory -> Finish
-
-# Edit
-
-Source files may be edited under the "[Source Directory]" label in the Project Explorer.
-
-
-## Build
-
-To build the project, in Eclipse, unfold boilerplate-eclipse project in Project Explorer,
-unfold Build Targets, double click on "all" to build all projects.
-
-## Run
-
-1. In Eclipse, right click on the boilerplate-eclipse in Project Explorer,
-select Run As -> Local C/C++ Application
-
-2. Choose the binaries to run (e.g. shell-app, cpp-test for unit testing)
-
-
-## Debug
-
-
-1. Set breakpoint in source file (i.e. double click in the left margin on the line you want 
-the program to break).
-
-2. In Eclipse, right click on the boilerplate-eclipse in Project Explorer, select Debug As -> 
-Local C/C++ Application, choose the binaries to run (e.g. shell-app).
-
-3. If prompt to "Confirm Perspective Switch", select yes.
-
-4. Program will break at the breakpoint you set.
-
-5. Press Step Into (F5), Step Over (F6), Step Return (F7) to step/debug your program.
-
-6. Right click on the variable in editor to add watch expression to watch the variable in 
-debugger window.
-
-7. Press Terminate icon to terminate debugging and press C/C++ icon to switch back to C/C++ 
-perspetive view (or Windows->Perspective->Open Perspective->C/C++).
-
-
-## Plugins
-
-- CppChEclipse
-
-    To install and run cppcheck in Eclipse
-
-    1. In Eclipse, go to Window -> Preferences -> C/C++ -> cppcheclipse.
-    Set cppcheck binary path to "/usr/bin/cppcheck".
-
-    2. To run CPPCheck on a project, right click on the project name in the Project Explorer 
-    and choose cppcheck -> Run cppcheck.
-
-
-- Google C++ Sytle
-
-    To include and use Google C++ Style formatter in Eclipse
-
-    1. In Eclipse, go to Window -> Preferences -> C/C++ -> Code Style -> Formatter. 
-    Import [eclipse-cpp-google-style][reference-id-for-eclipse-cpp-google-style] and apply.
-
-    2. To use Google C++ style formatter, right click on the source code or folder in 
-    Project Explorer and choose Source -> Format
-
-[reference-id-for-eclipse-cpp-google-style]: https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-cpp-google-style.xml
-
-- Git
-
-    It is possible to manage version control through Eclipse and the git plugin, but it typically requires creating another project. If you're interested in this, try it out yourself and contact me on Canvas.
+## AGILE ITERATIVE PROCESS
+[![Solo Iterative Process](https://img.shields.io/badge/AIP-ClickHere-brightgreen.svg?style=flat)](https://docs.google.com/spreadsheets/d/1u8QQ8bs4w7-aTD3opihKKRTvK2XOl-JbmZHEvHiuM_Q/edit?ts=5da0a966#gid=0)
