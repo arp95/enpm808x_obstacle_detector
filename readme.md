@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/arp95/enpm808x_obstacle_detector.svg?branch=master)](https://travis-ci.org/arp95/enpm808x_obstacle_detector)
 [![Coverage Status](https://coveralls.io/repos/github/arp95/enpm808x_obstacle_detector/badge.svg?branch=master)](https://coveralls.io/github/arp95/enpm808x_obstacle_detector?branch=master)
 [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](LICENSE.md)
-[![OpenCV Install](https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html)]
+[![OpenCV Installation](https://img.shields.io/badge/OpenCV%20Installation%3F-brightgreen.svg?style=flat)](https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html)
 ---
 
 ## Overview
