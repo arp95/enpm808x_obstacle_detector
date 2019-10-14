@@ -20,7 +20,7 @@ The YOLOv3 object detector algorithm will be used for this on a pre-trained COCO
 	3. After the output is obtained it will postprocessed and the boxes with low confidence scores will be suppressed
 	   using non max suppresion.
 
-##Dependencies
+## Dependencies
 [![OpenCV Installation](https://img.shields.io/badge/OpenCV4.0.0-Clickhere-brightgreen.svg?style=flat)](https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html)
 
 ## Standard install via command-line
@@ -57,4 +57,4 @@ cmake -G  "Eclipse CDT4 - Unix Makefiles" ../enpm808x_obstacle_detector/
 
 ```
 ## SOLO ITERATIVE PROCESS
-[![Solo Iterative Process](https://img.shields.io/badge/SIP-brightgreen.svg?style=flat)](https://docs.google.com/spreadsheets/d/1u8QQ8bs4w7-aTD3opihKKRTvK2XOl-JbmZHEvHiuM_Q/edit?ts=5da0a966#gid=0)
+[![Solo Iterative Process](https://img.shields.io/badge/SIP-ClickHere-brightgreen.svg?style=flat)](https://docs.google.com/spreadsheets/d/1u8QQ8bs4w7-aTD3opihKKRTvK2XOl-JbmZHEvHiuM_Q/edit?ts=5da0a966#gid=0)
