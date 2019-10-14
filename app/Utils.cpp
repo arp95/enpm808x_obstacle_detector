@@ -4,6 +4,8 @@
  * @date        10/11/2019
  * @brief       Implementation for Utils class.
  */
+#include <iostream>
+#include <string>
 #include <Utils.h>
 
 /**
@@ -48,5 +50,6 @@ std::vector<std::string> Utils::getClasses() {
 /**
  * Draws bounding box given the coordinates.
  */
-void Utils::drawBoundingBox(int classId, float confidence, int left, int top, int right, int bottom, cv::Mat& frame) {
+void Utils::drawBoundingBox(int classId, float confidence, int left, int top,
+                            int right, int bottom, const cv::Mat& frame) {
 }

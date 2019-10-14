@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <opencv2/dnn/dnn.hpp>
 #include <Utils.h>
 
 class YOLOv3 {
@@ -124,6 +125,6 @@ class YOLOv3 {
    * @param  one parameter, which is the cv::dnn::net.
    * @return type vector<std::string>.
    */
-  std::vector<std::string> getOutputLayerNames(const cv::dnn::Net& net);
+  std::vector<std::string> getOutputLayerNames(const cv::dnn::Net & net);
 };
 #endif  // INCLUDE_YOLOV3_H_
