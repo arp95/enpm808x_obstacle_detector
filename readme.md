@@ -56,5 +56,5 @@ cd enpm808x_build
 cmake -G  "Eclipse CDT4 - Unix Makefiles" ../enpm808x_obstacle_detector/
 
 ```
-## SOLO ITERATIVE PROCESS
+## AGILE ITERATIVE PROCESS
 [![Solo Iterative Process](https://img.shields.io/badge/SIP-ClickHere-brightgreen.svg?style=flat)](https://docs.google.com/spreadsheets/d/1u8QQ8bs4w7-aTD3opihKKRTvK2XOl-JbmZHEvHiuM_Q/edit?ts=5da0a966#gid=0)
