@@ -69,19 +69,19 @@ int YOLOv3::getInputHeight() {
 /**
  * Preprocessing of input image.
  */
-cv::Mat YOLOv3::preprocessImage(cv::Mat& frame) {
+cv::Mat YOLOv3::preprocessImage(const cv::Mat& frame) {
 }
 
 /**
  * Forward pass in YOLOv3 network.
  */
-std::vector<cv::Mat> YOLOv3::run(cv::Mat& frame) {
+std::vector<cv::Mat> YOLOv3::run(const cv::Mat& frame) {
 }
 
 /**
  * Postprocessing of the output of yolov3 with nms algorithm.
  */
-void YOLOv3::postprocess(cv::Mat& frame, const std::vector<cv::Mat>& outputs) {
+void YOLOv3::postprocess(const cv::Mat& frame, const std::vector<cv::Mat>& outputs) {
 }
 
 /**
