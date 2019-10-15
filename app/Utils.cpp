@@ -79,7 +79,7 @@ std::vector<std::string> Utils::getClasses() {
 /**
  * Draws bounding box given the coordinates.
  */
-void Utils::drawBoundingBox(int classId, double confidence, int left, int top, int right, int bottom, const cv::Mat& frame) {
+void Utils::drawBoundingBox(int classId, double confidence, int left, int top, int right, int bottom, const cv::Mat & frame) {
     // function to draw a rectangle in the image given the coordinates
     cv::rectangle(frame, cv::Point(left, top), cv::Point(right, bottom), cv::Scalar(255, 180, 60), 3);
     // get class label from classes vector
