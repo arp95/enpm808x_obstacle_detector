@@ -9,7 +9,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <opencv2/opencv.hpp>
 
 class Utils {
  private:
@@ -51,7 +50,7 @@ class Utils {
    * @param  one parameter, classesFile value.
    * @return type void.
    */
-  void setClassesFile(std::string classesFileValue);
+  void setClassesFile(const std::string classesFileValue);
 
   /**
    * @brief  returns the modelConfiguration value.
@@ -65,7 +64,7 @@ class Utils {
    * @param  one parameter, modelConfiguration value.
    * @return type void.
    */
-  void setModelConfiguration(std::string modelConfigurationValue);
+  void setModelConfiguration(const std::string modelConfigurationValue);
 
   /**
    * @brief  returns the modelWeights value.
@@ -79,8 +78,8 @@ class Utils {
    * @param  one parameter, modelWeights value.
    * @return type void.
    */
-  void setModelWeights(std::string modelWeightsValue);
- 
+  void setModelWeights(const std::string modelWeightsValue);
+
   /**
    * @brief  adds classes in std::vector<std::string>.
    * @param  no parameter.
@@ -100,7 +99,6 @@ class Utils {
    * @param  seven parameters, one is classId, confidence, left, top, right, bottom and frame image.
    * @return type void.
    */
-  void drawBoundingBox(int classId, double confidence, int left, int top,
-                       int right, int bottom, const cv::Mat& frame);
+  void drawBoundingBox(int classId, double confidence, int left, int top, int right, int bottom, const cv::Mat& frame);
 };
 #endif  // INCLUDE_UTILS_H_
