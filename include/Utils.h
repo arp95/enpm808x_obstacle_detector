@@ -47,11 +47,25 @@ class Utils {
   std::string getClassesFile();
 
   /**
+   * @brief  sets the classesFile value.
+   * @param  one parameter, classesFile value.
+   * @return type void.
+   */
+  void setClassesFile(std::string classesFileValue);
+
+  /**
    * @brief  returns the modelConfiguration value.
    * @param  no parameter.
    * @return type std::string.
    */
   std::string getModelConfiguration();
+
+  /**
+   * @brief  sets the modelConfiguration value.
+   * @param  one parameter, modelConfiguration value.
+   * @return type void.
+   */
+  void setModelConfiguration(std::string modelConfigurationValue);
 
   /**
    * @brief  returns the modelWeights value.
@@ -60,6 +74,13 @@ class Utils {
    */
   std::string getModelWeights();
 
+  /**
+   * @brief  sets the modelWeights value.
+   * @param  one parameter, modelWeights value.
+   * @return type void.
+   */
+  void setModelWeights(std::string modelWeights);
+ 
   /**
    * @brief  adds classes in std::vector<std::string>.
    * @param  no parameter.

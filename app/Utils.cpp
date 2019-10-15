@@ -23,15 +23,33 @@ std::string Utils::getClassesFile() {
 }
 
 /**
+ * Set classesFile from Utils.
+ */
+void Utils::setClassesFile(std::string classesFileValue) {
+}
+
+/**
  * Get modelConfiguration from Utils.
  */
 std::string Utils::getModelConfiguration() {
 }
 
 /**
+ * Set modelConfiguration from Utils.
+ */
+void Utils::setModelConfiguration(std::string modelConfigurationValue) {
+}
+
+/**
  * Get modelWeights from Utils.
  */
 std::string Utils::getModelWeights() {
+}
+
+/**
+ * Set modelWeights from Utils.
+ */
+void Utils::setModelWeights(std::string modelWeights) {
 }
 
 /**
