@@ -16,73 +16,87 @@ YOLOv3::YOLOv3() {
 }
 
 /**
- * YOLOv3 constructor with four parameters.
+ * @brief: YOLOv3 constructor with four parameters.
  */
-YOLOv3::YOLOv3(double confThresholdValue, double nmsThresholdValue, int inputWidthValue, int inputHeightValue) {
+YOLOv3::YOLOv3(double confThresholdValue, double nmsThresholdValue,
+               int inputWidthValue, int inputHeightValue)
+    : confThreshold(confThresholdValue),
+      nmsThreshold(nmsThresholdValue),
+      inputWidth(inputWidthValue),
+      inputHeight(inputHeightValue) {
+
 }
 
 /**
- * Set confThreshold from YOLOv3 class.
+ * @brief: Set confThreshold from YOLOv3 class.
  */
 void YOLOv3::setConfThreshold(double confThresholdValue) {
+  this->confThreshold = confThresholdValue;
 }
 
 /**
- * Get confThreshold from YOLOv3 class.
+ *@brief: Get confThreshold from YOLOv3 class.
  */
 double YOLOv3::getConfThreshold() {
+  return this->confThreshold;
 }
 
 /**
- * Set nmsThreshold from YOLOv3 class.
+ *@brief: Set nmsThreshold from YOLOv3 class.
  */
 void YOLOv3::setNmsThreshold(double nmsThresholdValue) {
+  this->nmsThreshold = nmsThresholdValue;
 }
 
 /**
- * Get nmsThreshold from YOLOv3 class.
+ *@brief: Get nmsThreshold from YOLOv3 class.
  */
 double YOLOv3::getNmsThreshold() {
+  return this->nmsThreshold;
 }
 
 /**
- * Set inputWidth from YOLOv3 class.
+ *@brief: Set inputWidth from YOLOv3 class.
  */
-void YOLOv3::setInputWidth(double inputWidthValue) {
+void YOLOv3::setInputWidth(int inputWidthValue) {
+  this->inputWidth = inputWidthValue;
 }
 
 /**
- * Get inputWidth from YOLOv3 class.
+ *@brief: Get inputWidth from YOLOv3 class.
  */
 int YOLOv3::getInputWidth() {
+  return this->inputWidth;
 }
 
 /**
- * Set inputHeight from YOLOv3 class.
+ *@brief: Set inputHeight from YOLOv3 class.
  */
-void YOLOv3::setInputHeight(double inputHeightValue) {
+void YOLOv3::setInputHeight(int inputHeightValue) {
+  this->inputHeight = inputHeightValue;
 }
 
 /**
- * Get inputHeight from YOLOv3 class.
+ *@brief: Get inputHeight from YOLOv3 class.
  */
 int YOLOv3::getInputHeight() {
+  return this->inputHeight;
 }
 
 /**
- * Postprocessing of the output of yolov3 with nms algorithm.
+ *@brief: Postprocessing of the output of yolov3 with nms algorithm.
  */
 void YOLOv3::postprocess(cv::Mat& frame, const std::vector<cv::Mat>& outputs) {
 }
 
 /**
- * Forward pass in YOLOv3 network.
+ *@brief: Forward pass in YOLOv3 network.
  */
 std::vector<cv::Mat> YOLOv3::run(cv::Mat& frame) {
 }
 
 /**
- * Get names of output layers of the network.
+ *@brief: Get names of output layers of the network.
  */
 std::vector<std::string> YOLOv3::getOutputLayerNames(const cv::dnn::Net& net) {
 }

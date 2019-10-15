@@ -1,10 +1,10 @@
+/* Copyright 2019 Shantam Bajpai, Arpit Aggarwal
+ * @file YOLOv3.h
+ * @author Shantam Bajpi, Arpit Aggarwal
+ */
+
 #ifndef INCLUDE_YOLOV3_H_
 #define INCLUDE_YOLOV3_H_
-
-/* Copyright 2019 Arpit Aggarwal, Shantam Bajpai
- * @file YOLOv3.h
- * @author Arpit Aggarwal, Shantam Bajpai
- */
 
 #include <iostream>
 #include <string>
