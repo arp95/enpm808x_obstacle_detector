@@ -15,6 +15,7 @@ Arpit Aggarwal: I am a first year graduate student pursuing my masters degree in
 
 For a robot to navigate autonomously in a given region it should have the capability to efficiently detect and avoid the obstacles that might come in its path. In this projecct we will develop a real time object detection classifier for ACME Robotics. The output obtained by the module can be used by the path planning component of the robotic system. 
 The YOLOv3 object detector algorithm will be used for this on a pre-trained COCO Dataset.
+
 	1. The module will take an nxn sized input image/video frames and will preprocess each image/frame and convert it into a blob.
 	2. The output blob will then be passed as an input to the pre-trained YOLOv3 algorithm which will return a list of bounding boxes for the input image.
 	3. After the output is obtained it will postprocessed and the boxes with low confidence scores will be suppressed using non max suppresion.
