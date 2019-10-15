@@ -5,8 +5,6 @@
  * @brief       Implementation for Foo class.
  */
 #include <Foo.h>
-#include <string>
-#include <YOLOv3.h>
 
 /**
  * Foo constructor.
@@ -17,23 +15,19 @@ Foo::Foo() {
 /**
  * @brief: Sets the isImage value.
  */
-
-void Foo::setIsImage(bool isImage) {
-
+void Foo::setIsImage(bool isImageValue) {
 }
 
 /**
  * @brief: Returns the isImage value.
  */
-
 bool Foo::getIsImage() {
 }
 
 /**
- * @brief: Returns the isImage value.
+ * @brief: Sets the isVideo value.
  */
-
-void Foo::setIsVideo(bool isVideo) {
+void Foo::setIsVideo(bool isVideoValue) {
 
 }
 /**

@@ -4,8 +4,7 @@
  * @date        10/11/2019
  * @brief       Implementation for Utils class.
  */
-#include <iostream>
-#include <string>
+
 #include <Utils.h>
 
 /**
@@ -36,13 +35,13 @@ std::string Utils::getModelWeights() {
 }
 
 /**
- * Adds classes in vector<string>.
+ * Adds classes in std::vector<std::string>.
  */
 void Utils::addClasses() {
 }
 
 /**
- * Returns classes of type vector<string>.
+ * Returns classes of type std::vector<std::string>.
  */
 std::vector<std::string> Utils::getClasses() {
 }
@@ -50,6 +49,6 @@ std::vector<std::string> Utils::getClasses() {
 /**
  * Draws bounding box given the coordinates.
  */
-void Utils::drawBoundingBox(int classId, float confidence, int left, int top,
+void Utils::drawBoundingBox(int classId, double confidence, int left, int top,
                             int right, int bottom, const cv::Mat& frame) {
 }

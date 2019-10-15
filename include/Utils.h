@@ -42,33 +42,33 @@ class Utils {
   /**
    * @brief  returns the classesFile value.
    * @param  no parameter.
-   * @return type string.
+   * @return type std::string.
    */
   std::string getClassesFile();
 
   /**
    * @brief  returns the modelConfiguration value.
    * @param  no parameter.
-   * @return type string.
+   * @return type std::string.
    */
   std::string getModelConfiguration();
 
   /**
    * @brief  returns the modelWeights value.
    * @param  no parameter.
-   * @return type string.
+   * @return type std::string.
    */
   std::string getModelWeights();
 
   /**
-   * @brief  adds classes in vector<string>.
+   * @brief  adds classes in std::vector<std::string>.
    * @param  no parameter.
    * @return type void.
    */
   void addClasses();
 
   /**
-   * @brief  returns classes of type vector<string>.
+   * @brief  returns classes of type std::vector<std::string>.
    * @param  no parameter.
    * @return type std::vector<std::string>.
    */
@@ -79,7 +79,7 @@ class Utils {
    * @param  seven parameters, one is classId, confidence, left, top, right, bottom and frame image.
    * @return type void.
    */
-  void drawBoundingBox(int classId, float confidence, int left, int top,
-                       int right, int bottom, const cv::Mat & frame);
+  void drawBoundingBox(int classId, double confidence, int left, int top,
+                       int right, int bottom, const cv::Mat& frame);
 };
 #endif  // INCLUDE_UTILS_H_
