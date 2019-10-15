@@ -6,6 +6,7 @@
  */
 
 #include <Utils.h>
+#include <string>
 
 /**
  * Utils constructor.
@@ -49,7 +50,7 @@ std::string Utils::getModelWeights() {
 /**
  * Set modelWeights from Utils.
  */
-void Utils::setModelWeights(std::string modelWeights) {
+void Utils::setModelWeights(std::string modelWeightsValue) {
 }
 
 /**

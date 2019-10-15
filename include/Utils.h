@@ -79,7 +79,7 @@ class Utils {
    * @param  one parameter, modelWeights value.
    * @return type void.
    */
-  void setModelWeights(std::string modelWeights);
+  void setModelWeights(std::string modelWeightsValue);
  
   /**
    * @brief  adds classes in std::vector<std::string>.
