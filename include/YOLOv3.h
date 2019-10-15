@@ -3,14 +3,16 @@
  * @author Shantam Bajpi, Arpit Aggarwal
  */
 
+<<<<<<< HEAD
 #ifndef INCLUDE_YOLOV3_H_
 #define INCLUDE_YOLOV3_H_
 
+=======
+#include <Utils.h>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <opencv2/dnn/dnn.hpp>
-#include <Utils.h>
 
 class YOLOv3 {
  private:
@@ -107,11 +109,11 @@ class YOLOv3 {
   int getInputHeight();
 
   /**
-   * @brief  postprocessing of the output of yolov3 with nms algorithm.
-   * @param  two parameters, one is frame image and the other is outputs vector.
-   * @return type void.
+   * @brief  preprocessing of the input image.
+   * @param  one parameter, which is the input image.
+   * @return type cv::Mat.
    */
-  void postprocess(const cv::Mat& frame, const std::vector<cv::Mat>& outputs);
+  cv::Mat preprocess(const cv::Mat& frame);
 
   /**
    * @brief  forward pass in YOLOv3 network.
@@ -121,9 +123,16 @@ class YOLOv3 {
   std::vector<cv::Mat> run(const cv::Mat& frame);
 
   /**
+   * @brief  postprocessing of the output of yolov3 with nms algorithm.
+   * @param  two parameters, one is frame image and the other is outputs vector.
+   * @return type void.
+   */
+  void postprocess(const cv::Mat& frame, const std::vector<cv::Mat>& outputs);
+
+  /**
    * @brief  get names of output layers of the network.
    * @param  one parameter, which is the cv::dnn::net.
-   * @return type vector<std::string>.
+   * @return type std::vector<std::string>.
    */
   std::vector<std::string> getOutputLayerNames(const cv::dnn::Net & net);
 };

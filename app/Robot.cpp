@@ -1,61 +1,55 @@
 /**@Copyright (C) 2019 Arpit Aggarwal, Shantam Bajpai
- * @file        Foo.cpp
+ * @file        Robot.cpp
  * @author      Arpit Aggarwal, Shantam Bajpai
  * @date        10/11/2019
- * @brief       Implementation for Foo class.
+ * @brief       Implementation for Robot class.
  */
-#include <Foo.h>
-#include <string>
-#include <YOLOv3.h>
+#include <Robot.h>
 
 /**
- * Foo constructor.
+ * Robot constructor.
  */
-Foo::Foo() {
+Robot::Robot() {
 }
 
 /**
  * @brief: Sets the isImage value.
  */
-
-void Foo::setIsImage(bool isImage) {
-
+void Robot::setIsImage(bool isImageValue) {
 }
 
 /**
  * @brief: Returns the isImage value.
  */
-
-bool Foo::getIsImage() {
+bool Robot::getIsImage() {
 }
 
 /**
- * @brief: Returns the isImage value.
+ * @brief: Sets the isVideo value.
  */
-
-void Foo::setIsVideo(bool isVideo) {
-
+void Robot::setIsVideo(bool isVideoValue) {
 }
+
 /**
  * @brief: Returns the isVideo value.
  */
-bool Foo::getIsVideo() {
+bool Robot::getIsVideo() {
 }
 
 /**
  * @brief: Updates the isVideo and isImage value.
  */
-void Foo::checkParser() {
+void Robot::checkParser() {
 }
 
 /**
  * @brief: Processes the image and updates the image with bounding boxes.
  */
-void Foo::processImage(std::string path) {
+void Robot::processImage(std::string path) {
 }
 
 /**
  * @brief: Processes the video and updates the video frames with bounding boxes.
  */
-void Foo::processVideo(std::string path) {
+void Robot::processVideo(std::string path) {
 }
