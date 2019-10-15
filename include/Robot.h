@@ -1,8 +1,8 @@
-#ifndef INCLUDE_FOO_H_
-#define INCLUDE_FOO_H_
+#ifndef INCLUDE_ROBOT_H_
+#define INCLUDE_ROBOT_H_
 
 /* Copyright 2019 Arpit Aggarwal, Shantam Bajpai
- * @file Foo.h
+ * @file Robot.h
  * @author Arpit Aggarwal, Shantam Bajpai
  */
 
@@ -10,7 +10,7 @@
 #include <string>
 #include <YOLOv3.h>
 
-class Foo {
+class Robot {
  private:
   /**
    * @brief private variable for YOLOv3 class.
@@ -29,9 +29,9 @@ class Foo {
 
  public:
   /**
-   * @brief  constructor for Foo class with no parameters.
+   * @brief  constructor for Robot class with no parameters.
    */
-  Foo();
+  Robot();
 
   /**
    * @brief  Sets the isImage value.
@@ -82,4 +82,4 @@ class Foo {
    */
   void processVideo(std::string path);
 };
-#endif  // INCLUDE_FOO_H_
+#endif  // INCLUDE_ROBOT_H_
