@@ -13,6 +13,7 @@
 #include <Robot.h>
 #include <Utils.h>
 #include <YOLOv3.h>
+#include <vector>
 
 YOLOv3 yv3(1, 1, 1, 1);
 Robot f;
@@ -76,4 +77,36 @@ TEST(checkBoolSetterGetter, checkIsImage) {
 TEST(checkBoolSetterGetter, checkIsVideo) {
   f.setIsVideo(1);
   EXPECT_EQ(f.getIsVideo(), 1);
+}
+
+/**
+ * @brief Test case for getClassesFile method of Utils class.
+ */
+TEST(checkUtilsGetterSetter, checkClassesFile) {
+  Util.setClassesFile("arpit");
+  EXPECT_EQ(Util.getClassesFile(), "arpit");
+}
+
+/**
+ * @brief Test case for getModelConfiguration method of Utils class.
+ */
+TEST(checkUtilsGetterSetter, checkModelConfigurationFile) {
+  Util.setModelConfiguration("shantam");
+  EXPECT_EQ(Util.getModelConfiguration(), "shantam");
+}
+
+/**
+ * @brief Test case for getModelWeights method of Utils class.
+ */
+TEST(checkUtilsGetterSetter, checkModelWeightsFile) {
+  Util.setModelWeights("shantam");
+  EXPECT_EQ(Util.getModelWeights(), "shantam");
+}
+
+/**
+ * @brief Test case for getClasses method of Utils class.
+ */
+TEST(checkUtilsGetterSetter, checkClassesSize) {
+  std::vector<std::string> classes = Util.getClasses();
+  EXPECT_EQ(classes.size(), 0);
 }
