@@ -69,7 +69,7 @@ int YOLOv3::getInputHeight() {
 /**
  * Preprocessing of input image.
  */
-cv::Mat YOLOv3::preprocessImage(const cv::Mat& frame) {
+cv::Mat YOLOv3::preprocess(const cv::Mat& frame) {
 }
 
 /**

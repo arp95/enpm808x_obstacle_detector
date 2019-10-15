@@ -111,7 +111,7 @@ class YOLOv3 {
    * @param  one parameter, which is the input image.
    * @return type cv::Mat.
    */
-  cv::Mat preprocessImage(const cv::Mat& frame);
+  cv::Mat preprocess(const cv::Mat& frame);
 
   /**
    * @brief  forward pass in YOLOv3 network.
