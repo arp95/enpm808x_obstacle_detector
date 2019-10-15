@@ -5,9 +5,6 @@
  * @brief       Implementation for YOLOv3 class.
  */
 #include <YOLOv3.h>
-#include <Utils.h>
-#include <opencv2/opencv.hpp>
-#include <opencv2/dnn.hpp>
 
 /**
  * YOLOv3 constructor.
@@ -48,7 +45,7 @@ double YOLOv3::getNmsThreshold() {
 /**
  * Set inputWidth from YOLOv3 class.
  */
-void YOLOv3::setInputWidth(double inputWidthValue) {
+void YOLOv3::setInputWidth(int inputWidthValue) {
 }
 
 /**
@@ -60,7 +57,7 @@ int YOLOv3::getInputWidth() {
 /**
  * Set inputHeight from YOLOv3 class.
  */
-void YOLOv3::setInputHeight(double inputHeightValue) {
+void YOLOv3::setInputHeight(int inputHeightValue) {
 }
 
 /**
@@ -70,15 +67,21 @@ int YOLOv3::getInputHeight() {
 }
 
 /**
- * Postprocessing of the output of yolov3 with nms algorithm.
+ * Preprocessing of input image.
  */
-void YOLOv3::postprocess(cv::Mat& frame, const std::vector<cv::Mat>& outputs) {
+cv::Mat YOLOv3::preprocess(const cv::Mat& frame) {
 }
 
 /**
  * Forward pass in YOLOv3 network.
  */
-std::vector<cv::Mat> YOLOv3::run(cv::Mat& frame) {
+std::vector<cv::Mat> YOLOv3::run(const cv::Mat& frame) {
+}
+
+/**
+ * Postprocessing of the output of yolov3 with nms algorithm.
+ */
+void YOLOv3::postprocess(const cv::Mat& frame, const std::vector<cv::Mat>& outputs) {
 }
 
 /**

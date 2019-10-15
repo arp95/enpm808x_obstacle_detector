@@ -1,6 +1,5 @@
-// Copyright 2019 Shantam Bajpi and Arpit Aggarwal
 /**
- *
+ * Copyright 2019 Shantam Bajpai and Arpit Aggarwal
  * @file  test.cpp
  * @brief Test source file for enpm808x_obstacle_detector
  *        Contains the required headers and methods.
@@ -11,15 +10,14 @@
  */
 
 #include <gtest/gtest.h>
-#include <Foo.h>
+#include <Robot.h>
 #include <Utils.h>
 #include <YOLOv3.h>
-#include <opencv2/opencv.hpp>
 
 YOLOv3 yv3(1, 1, 1, 1);
-Foo f;
+Robot f;
 Utils Util;
-double val;
+double val = 2;
 int val1;
 
 /**
@@ -27,8 +25,7 @@ int val1;
  * test checks whether value set for confidence is same as the value input
  * by the getConfThreshold method.
  */
-
-TEST(checkGetterSetter , checkConfThreshold) {
+TEST(checkGetterSetter, checkConfThreshold) {
   yv3.setConfThreshold(val);
   EXPECT_EQ(yv3.getConfThreshold(), val);
 }
@@ -38,8 +35,7 @@ TEST(checkGetterSetter , checkConfThreshold) {
  * test checks whether value set for nmsThreshold is same as the value input
  * by the getNmsThreshold method.
  */
-
-TEST(checkGetterSetter , checknmsThreshold) {
+TEST(checkGetterSetter, checknmsThreshold) {
   yv3.setNmsThreshold(val);
   EXPECT_EQ(yv3.getNmsThreshold(), val);
 }
@@ -49,8 +45,7 @@ TEST(checkGetterSetter , checknmsThreshold) {
  * test checks whether value set for InputWidth is same as the value input
  * by the getInputWidth method.
  */
-
-TEST(checkGetterSetter , checkInputWidth) {
+TEST(checkGetterSetter, checkInputWidth) {
   yv3.setInputWidth(val);
   EXPECT_EQ(yv3.getInputWidth(), val1);
 }
@@ -60,8 +55,7 @@ TEST(checkGetterSetter , checkInputWidth) {
  * test checks whether value set for InputHeight is same as the value input
  * by the getInputHeight method.
  */
-
-TEST(checkGetterSetter , checkInputHeight) {
+TEST(checkGetterSetter, checkInputHeight) {
   yv3.setInputHeight(val);
   EXPECT_EQ(yv3.getInputHeight(), val1);
 }
@@ -70,8 +64,7 @@ TEST(checkGetterSetter , checkInputHeight) {
  * @brief Test case for getIsImage method of Foo class. The
  * test checks whether the boolean value for getIsImage method.
  */
-
-TEST(checkBoolSetterGetter , checkIsImage) {
+TEST(checkBoolSetterGetter, checkIsImage) {
   f.setIsImage(0);
   EXPECT_EQ(f.getIsImage(), 0);
 }
@@ -80,8 +73,7 @@ TEST(checkBoolSetterGetter , checkIsImage) {
  * @brief Test case for getIsVideo method of Foo class. The
  * test checks whether the boolean value for getIsImage method.
  */
-
-TEST(checkBoolSetterGetter , checkIsVideo) {
+TEST(checkBoolSetterGetter, checkIsVideo) {
   f.setIsVideo(1);
   EXPECT_EQ(f.getIsVideo(), 1);
 }
