@@ -28,8 +28,8 @@ bool Robot::getIsImage() {
  * @brief: Sets the isVideo value.
  */
 void Robot::setIsVideo(bool isVideoValue) {
-
 }
+
 /**
  * @brief: Returns the isVideo value.
  */

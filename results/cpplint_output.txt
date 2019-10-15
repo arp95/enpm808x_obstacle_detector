@@ -1,12 +1,13 @@
-Done processing include/Foo.h
-include/Utils.h:81:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing include/Robot.h
 Done processing include/Utils.h
-include/YOLOv3.h:50:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+include/YOLOv3.h:51:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
 Done processing include/YOLOv3.h
-Done processing app/Foo.cpp
 Done processing app/main.cpp
-app/Utils.cpp:51:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing app/Robot.cpp
 Done processing app/Utils.cpp
-app/YOLOv3.cpp:21:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+app/YOLOv3.cpp:18:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+app/YOLOv3.cpp:84:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
 Done processing app/YOLOv3.cpp
-Total errors found: 4
+Done processing test/test.cpp
+Done processing test/test.cpp
+Total errors found: 3
