@@ -30,12 +30,12 @@ class Robot {
   /**
    * @brief private variable for imagePath.
    */
-   std::string imagePath;
+  std::string imagePath;
 
    /**
    * @brief private variable for videoPath.
    */
-   std::string videoPath;
+  std::string videoPath;
 
  public:
   /**

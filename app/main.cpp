@@ -10,8 +10,7 @@
 const char* keys =
 "{help h usage ? | | Usage examples: \n\t\t./object_detection_yolo.out --image=dog.jpg \n\t\t./object_detection_yolo.out --video=run_sm.mp4}"
 "{image i        |<none>| input image   }"
-"{video v       |<none>| input video   }"
-;
+"{video v       |<none>| input video   }";
 
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -19,9 +18,14 @@ const char* keys =
 #include <Robot.h>
 
 int main(int argc, char** argv) {
+    // run main code
     cv::CommandLineParser parser(argc, argv, keys);
     Robot robot;
     robot.checkParser(parser);
+    if (robot.getIsImage()) {
+        robot.processImage();
+    } else {
+        robot.processVideo();
+    }
     return 0;
 }
-

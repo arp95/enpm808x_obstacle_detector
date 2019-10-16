@@ -4,11 +4,8 @@
  * @date        10/11/2019
  * @brief       Implementation for Robot class.
  */
+
 #include <Robot.h>
-#include <opencv2/opencv.hpp>
-#include <opencv2/imgproc.hpp>
-#include <opencv2/highgui.hpp>
-#include <YOLOv3.h>
 
 /**
  * Robot constructor.
@@ -53,10 +50,10 @@ bool Robot::getIsVideo() {
  * @brief: Updates the isVideo and isImage value and sets the imagePath and videoPath.
  */
 void Robot::checkParser(cv::CommandLineParser parser) {
-    if(parser.has("image")) {
+    if (parser.has("image")) {
         isImage = 1;
         imagePath = parser.get<std::string>("image");
-    } else if(parser.has("video")) {
+    } else if (parser.has("video")) {
         isVideo = 1;
         videoPath = parser.get<std::string>("video");
     }
@@ -68,7 +65,7 @@ void Robot::checkParser(cv::CommandLineParser parser) {
 void Robot::processImage() {
     try {
         std::ifstream imageFile(imagePath);
-        if(!imageFile) {
+        if (!imageFile) {
             throw("Image file required!");
         }
 
@@ -78,8 +75,8 @@ void Robot::processImage() {
         std::string outputFile;
         capture.open(imagePath);
         imagePath.replace(imagePath.end() - 4, imagePath.end(), "_yolov3_output.jpg");
-        outputFile = imagePath;
-        
+        outputFile = imagePath;        
+
         // perform analysis
         capture >> frame;
         blob = yolov3.preprocess(frame);
@@ -102,7 +99,7 @@ void Robot::processImage() {
 void Robot::processVideo() {
     try {
         std::ifstream videoFile(videoPath);
-        if(!videoFile) {
+        if (!videoFile) {
             throw("Video file required!");
         }
 
@@ -114,15 +111,13 @@ void Robot::processVideo() {
         capture.open(videoPath);
         videoPath.replace(videoPath.end() - 4, videoPath.end(), "_yolov3_output.avi");
         outputFile = videoPath;
-        outputVideo.open(outputFile, cv::VideoWriter::fourcc('M','J','P','G'), 28, cv::Size(capture.get(cv::CAP_PROP_FRAME_WIDTH), capture.get(cv::CAP_PROP_FRAME_HEIGHT)));
-        
-        while(1) {
+        outputVideo.open(outputFile, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), 28, cv::Size(capture.get(cv::CAP_PROP_FRAME_WIDTH), capture.get(cv::CAP_PROP_FRAME_HEIGHT)));        
+        while (1) {
             // perform analysis
             capture >> frame;
-            if(frame.empty()) {
+            if (frame.empty()) { 
                 break;
             }
-     
             blob = yolov3.preprocess(frame);
             std::vector<cv::Mat> outputs = yolov3.run(blob);
             yolov3.postprocess(frame, outputs);
@@ -136,5 +131,5 @@ void Robot::processVideo() {
         outputVideo.release();
     } catch(...) {
         std::cout << "Video File required!" << std::endl;
-    }    
+    }
 }
