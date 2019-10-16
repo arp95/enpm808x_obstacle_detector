@@ -39,7 +39,12 @@ bool Robot::getIsVideo() {
 /**
  * @brief: Updates the isVideo and isImage value.
  */
-void Robot::checkParser() {
+void checkParser(cv::CommandLineParser parser) {
+    if(parser.has("image")) {
+    
+    } else if(parser.has("video")) {
+
+    }
 }
 
 /**

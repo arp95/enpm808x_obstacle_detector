@@ -66,7 +66,7 @@ class Robot {
    * @param  no parameter.
    * @return type void.
    */
-  void checkParser();
+  void checkParser(cv::CommandLineParser parser);
 
   /**
    * @brief  processes the image and updates the image with bounding boxes.
