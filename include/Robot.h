@@ -27,6 +27,16 @@ class Robot {
    */
   bool isVideo;
 
+  /**
+   * @brief private variable for imagePath.
+   */
+   std::string imagePath;
+
+   /**
+   * @brief private variable for videoPath.
+   */
+   std::string videoPath;
+
  public:
   /**
    * @brief  constructor for Robot class with no parameters.
@@ -70,16 +80,16 @@ class Robot {
 
   /**
    * @brief  processes the image and updates the image with bounding boxes.
-   * @param  one parameter, path of image.
+   * @param  no parameters.
    * @return type void.
    */
-  void processImage(std::string path);
+  void processImage();
 
   /**
    * @brief  processes the video and updates the video frames with bounding boxes.
-   * @param  one parameter, path of video.
+   * @param  no parameters.
    * @return type void.
    */
-  void processVideo(std::string path);
+  void processVideo();
 };
 #endif  // INCLUDE_ROBOT_H_
