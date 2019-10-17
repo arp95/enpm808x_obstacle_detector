@@ -22,7 +22,7 @@ Robot::Robot() {
  * @brief: Sets the isImage value.
  */
 void Robot::setIsImage(bool isImageValue) {
-    isImage = isImageValue;
+  isImage = isImageValue;
 }
 
 /**
@@ -75,7 +75,7 @@ void Robot::processImage() {
         std::string outputFile;
         capture.open(imagePath);
         imagePath.replace(imagePath.end() - 4, imagePath.end(), "_yolov3_output.jpg");
-        outputFile = imagePath;        
+    outputFile = imagePath;
 
         // perform analysis
         capture >> frame;
@@ -111,11 +111,16 @@ void Robot::processVideo() {
         capture.open(videoPath);
         videoPath.replace(videoPath.end() - 4, videoPath.end(), "_yolov3_output.avi");
         outputFile = videoPath;
-        outputVideo.open(outputFile, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), 28, cv::Size(capture.get(cv::CAP_PROP_FRAME_WIDTH), capture.get(cv::CAP_PROP_FRAME_HEIGHT)));        
+    outputVideo.open(
+        outputFile,
+        cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),
+        28,
+        cv::Size(capture.get(cv::CAP_PROP_FRAME_WIDTH),
+                 capture.get(cv::CAP_PROP_FRAME_HEIGHT)));
         while (1) {
             // perform analysis
             capture >> frame;
-            if (frame.empty()) { 
+      if (frame.empty()) {
                 break;
             }
             blob = yolov3.preprocess(frame);

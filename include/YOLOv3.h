@@ -3,11 +3,9 @@
  * @author Shantam Bajpi, Arpit Aggarwal
  */
 
-<<<<<<< HEAD
 #ifndef INCLUDE_YOLOV3_H_
 #define INCLUDE_YOLOV3_H_
 
-=======
 #include <Utils.h>
 #include <iostream>
 #include <string>
@@ -19,7 +17,7 @@ class YOLOv3 {
   /**
    * @brief private variable for Utils class.
    */
-  Utils utils;
+  Utils utils = new Utils();
 
   /**
    * @brief private variable for confThreshold.
@@ -135,5 +133,11 @@ class YOLOv3 {
    * @return type std::vector<std::string>.
    */
   std::vector<std::string> getOutputLayerNames(const cv::dnn::Net & net);
+
+  /*
+   * @brief: Destructor for YOLOv3
+   */
+
+  virtual ~YOLOv3();
 };
 #endif  // INCLUDE_YOLOV3_H_
