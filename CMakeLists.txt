@@ -12,6 +12,9 @@ find_package(OpenCV 4.0.0 REQUIRED)
 #include opencv directories
 include_directories(${OpenCV_INCLUDE_DIRS})
 
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIR})
+
 #display opencv include directory
 message( [opencv] ${OpenCV_INCLUDE_DIRS} )
 message( [opencv] ${${OpenCV_LIBS}} )

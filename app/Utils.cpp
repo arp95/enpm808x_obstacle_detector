@@ -89,8 +89,20 @@ void Utils::drawBoundingBox(int classId, double confidence, int left, int top, i
     }
     // put information on image
     int base;
-    cv::Size labelSize = cv::getTextSize(classLabel, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &base);
+  cv::Size labelSize = cv::getTextSize(classLabel, cv::FONT_HERSHEY_DUPLEX, 0.5,
+                                       1, &base);
     top = std::max(top, labelSize.height);
-    cv::rectangle(frame, cv::Point(left, top - std::round(2.0 * labelSize.height)), cv::Point(left + std::round(2.0 * labelSize.width), top + base), cv::Scalar(255, 255, 255),  cv::FILLED);
-    cv::putText(frame, classLabel, cv::Point(left, top), cv::FONT_HERSHEY_SIMPLEX, 0.75, cv::Scalar(0, 0, 0), 1);
+  cv::rectangle(frame, cv::Point(left, top - round(2.0 * labelSize.height)),
+                cv::Point(left + round(2.0 * labelSize.width), top + base),
+                cv::Scalar(255, 255, 255), cv::FILLED);
+  cv::putText(frame, classLabel, cv::Point(left, top), cv::FONT_HERSHEY_DUPLEX,
+              0.75, cv::Scalar(0, 0, 0), 1);
+}
+
+/**
+ * @brief: Destructor Definition
+ */
+
+virtual Utils::~Utils() {
+  std::cout << "Destructor had been invoked" << std::endl;
 }
