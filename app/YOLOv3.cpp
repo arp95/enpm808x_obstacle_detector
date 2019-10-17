@@ -104,15 +104,15 @@ cv::Mat YOLOv3::preprocess(const cv::Mat& frame) {
  *@brief: Forward pass in YOLOv3 network.
  */
 std::vector<cv::Mat> YOLOv3::run(const cv::Mat& frame) {
-  cv::Mat output;
+  std::vector<cv::Mat> outputs;
   cv::dnn::Net network = cv::dnn::readNetFromDarknet(
       utils.getModelConfiguration(), utils.getModelWeights());
   network.setInput(frame);
-  network.forward(output, getOutputLayerNames(network));
+  network.forward(outputs, getOutputLayerNames(network));
 
   //Remove Bounding boxes that have low confidence using NMS Algorithm
-  postprocess(frame, output);
-  return 0;
+  postprocess(frame, outputs);
+  return outputs;
 }
 
 /**
@@ -120,18 +120,53 @@ std::vector<cv::Mat> YOLOv3::run(const cv::Mat& frame) {
  */
 void YOLOv3::postprocess(const cv::Mat& frame,
                          const std::vector<cv::Mat>& outputs) {
-  int counter = 0;
+  int outCounter = 0;
+  int inCounter = 0;
+  int nmsCounter = 0;
   std::vector<int> classId;
   std::vector<float> confidence;
   std::vector<cv::Rect> nmsBoxes;
   std::vector<cv::Mat>::iterator it;
+  std::vector<cv::Mat>::iterator id;
+  std::vector<cv::Mat>::iterator is;
+  //outer loop
   for (it = 0; it < outputs.size(); ++it) {
-    ++counter;
-    //float* data = static_cast<float*> outputs[counter].data;
-    //for() {
+    ++outCounter;
+    //pointer to std::vector<cv::Mat> data
+    float * matData = static_cast<float*>(outputs[outCounter].data);
+    for (id = 0; id < outputs[outCounter].rows;
+        ++id, matData = matData + outputs[outCounter].cols) {
+      ++inCounter;
+      cv::Mat scores = outputs[outCounter].row(inCounter).colRange(
+          5, outputs[outCounter].cols);
+      cv::Point detPoint;
+      double confidences;
+      //Find out the location of the maximum score
+      cv::minMaxLoc(scores, 0, &confidences, 0, &detPoint);
+      if (confidences > getConfThreshold()) {
+        int centCoordinateX = static_cast<int>(matData[0] * frame.cols);
+        int centCoordinateY = static_cast<int>(matData[1] * frame.rows);
+        int width = static_cast<int>(matData[2] * frame.cols);
+        int height = static_cast<int>(matData * frame.rows);
+        int leftTop = centCoordinateX - width / 2;
+        int rightBottom = centCoordinateY - height / 2;
 
-    //}
+        classId.push_back(detPoint.x);
+        confidence.push_back((float) confidences);
+        nmsBoxes.push_back(cv::Rect(leftTop, rightBottom, width, height));
+      }
+    }
   }
+  std::vector<int> indices;
+  cv::dnn::NMSBoxes(nmsBoxes, confidence, getConfThreshold(), getNmsThreshold(),
+                    indices);
+  for (is = 0; is < indices.size(); ++is) {
+    ++nmsCounter;
+    int id = indices[nmsCounter];
+    cv::Rect box = nmsBoxes[id];
+    utils.drawBoundingBox(classId[id], confidence[id], box.x, box.y,
+                          box.x + box.width, box.y + box.height, frame);
+}
 }
 
 /**
@@ -142,7 +177,7 @@ std::vector<std::string> YOLOv3::getOutputLayerNames(const cv::dnn::Net& net) {
   std::vector<std::string> outputLayerNames;
   std::vector<std::string> oplNames;
   std::vector<std::string>::iterator it;
-net = cv::dnn::readNetFromDarknet(utils.getModelConfiguration(),
+  net = cv::dnn::readNetFromDarknet(utils.getModelConfiguration(),
                                   utils.getModelWeights());
   outputLayerNames = net.getLayerNames();
   for (it = outputLayerNames.begin(); it < outputLayerNames.end(); it++) {
