@@ -17,17 +17,17 @@ class YOLOv3 {
   /**
    * @brief private variable for Utils class.
    */
-  Utils utils = new Utils();
+  Utils utils;
 
   /**
    * @brief private variable for confThreshold.
    */
-  double confThreshold;
+  float confThreshold;
 
   /**
    * @brief private variable for nmsThreshold.
    */
-  double nmsThreshold;
+  float nmsThreshold;
 
   /**
    * @brief private variable for inputWidth.
@@ -48,14 +48,14 @@ class YOLOv3 {
   /**
    * @brief  constructor for YOLOv3 class with four parameters.
    */
-  YOLOv3(double confThresholdValue, double nmsThresholdValue, int inputWidthValue, int inputHeightValue);
+  YOLOv3(float confThresholdValue, float nmsThresholdValue, int inputWidthValue, int inputHeightValue);
 
   /**
    * @brief  sets the confThreshold value.
    * @param  one parameter which is the confThreshold value.
    * @return type void.
    */
-  void setConfThreshold(double confThresholdValue);
+  void setConfThreshold(float confThresholdValue);
 
   /**
    * @brief  returns the confThreshold value.
@@ -69,7 +69,7 @@ class YOLOv3 {
    * @param  one parameter which is the nmsThreshold value.
    * @return type void.
    */
-  void setNmsThreshold(double nmsThresholdValue);
+  void setNmsThreshold(float nmsThresholdValue);
 
   /**
    * @brief  returns the nmsThreshold value.
@@ -125,7 +125,7 @@ class YOLOv3 {
    * @param  two parameters, one is frame image and the other is outputs vector.
    * @return type void.
    */
-  void postprocess(const cv::Mat& frame, const std::vector<cv::Mat>& outputs);
+  void postprocess(const cv::Mat& frame, std::vector<cv::Mat>& outputs);
 
   /**
    * @brief  get names of output layers of the network.

@@ -102,7 +102,5 @@ void Utils::drawBoundingBox(int classId, double confidence, int left, int top, i
 /**
  * @brief: Destructor Definition
  */
-
-virtual Utils::~Utils() {
-  std::cout << "Destructor had been invoked" << std::endl;
+Utils::~Utils() {
 }
