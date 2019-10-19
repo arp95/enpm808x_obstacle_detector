@@ -108,13 +108,10 @@ cv::Mat YOLOv3::preprocess(const cv::Mat& frame) {
 std::vector<cv::Mat> YOLOv3::run(const cv::Mat& frame) {
     std::vector<cv::Mat> outputs;
     cv::dnn::Net network = cv::dnn::readNetFromDarknet(utils.getModelConfiguration(), utils.getModelWeights());
-    
     // Set the blob as input to the dnn network
     network.setInput(frame);
-
     // Run forward pass
     network.forward(outputs, getOutputLayerNames(network));
-
     // Remove Bounding boxes that have low confidence using NMS Algorithm
     postprocess(frame, outputs);
     return outputs;
@@ -129,13 +126,12 @@ void YOLOv3::postprocess(const cv::Mat& frame, std::vector<cv::Mat>& outputs) {
     std::vector<cv::Rect> nmsBoxes;
     std::vector<cv::Mat>::iterator it;
     std::vector<int>::iterator is;
-  
     // Outer Loop
     for (it = outputs.begin(); it < outputs.end(); it++) {
         std::vector<int> rowNumbers;
         std::vector<int>::iterator iteratorRowNumbers;
         int row = 0;
-        float* matData = (float*)((*it).data);
+        float* matData = reinterpret_cast<float*>((*it).data);
         rowNumbers.resize((*it).rows);
 
         // Inner Loop
