@@ -90,7 +90,7 @@ void Utils::drawBoundingBox(int classId, double confidence, int left, int top, i
     int base;
   cv::Size labelSize = cv::getTextSize(classLabel, cv::FONT_HERSHEY_DUPLEX, 0.5, 1, &base);
     top = std::max(top, labelSize.height);
-    cv::rectangle(frame, cv::Point(left, top - round(2.0 * labelSize.height)), cv::Point(left + round(2.0 * labelSize.width), top + base), cv::Scalar(255, 255, 255), cv::FILLED);
+    cv::rectangle(frame, cv::Point(left, top - round(1.5 * labelSize.height)), cv::Point(left + round(1.5 * labelSize.width), top + base), cv::Scalar(255, 255, 255), cv::FILLED);
     cv::putText(frame, classLabel, cv::Point(left, top), cv::FONT_HERSHEY_DUPLEX, 0.75, cv::Scalar(0, 0, 0), 1);
 }
 
