@@ -84,19 +84,14 @@ void Utils::drawBoundingBox(int classId, double confidence, int left, int top, i
     cv::rectangle(frame, cv::Point(left, top), cv::Point(right, bottom), cv::Scalar(255, 180, 60), 3);
     // get class label from classes vector
     std::string classLabel = cv::format("%.2f", confidence);
-    if (classes.size() > classId) {
-        classLabel = classes[classId] + ":" + classLabel;
-    }
+    classLabel = classes[classId] + ":" + classLabel;
+
     // put information on image
     int base;
-  cv::Size labelSize = cv::getTextSize(classLabel, cv::FONT_HERSHEY_DUPLEX, 0.5,
-                                       1, &base);
+  cv::Size labelSize = cv::getTextSize(classLabel, cv::FONT_HERSHEY_DUPLEX, 0.5, 1, &base);
     top = std::max(top, labelSize.height);
-  cv::rectangle(frame, cv::Point(left, top - round(2.0 * labelSize.height)),
-                cv::Point(left + round(2.0 * labelSize.width), top + base),
-                cv::Scalar(255, 255, 255), cv::FILLED);
-  cv::putText(frame, classLabel, cv::Point(left, top), cv::FONT_HERSHEY_DUPLEX,
-              0.75, cv::Scalar(0, 0, 0), 1);
+    cv::rectangle(frame, cv::Point(left, top - round(2.0 * labelSize.height)), cv::Point(left + round(2.0 * labelSize.width), top + base), cv::Scalar(255, 255, 255), cv::FILLED);
+    cv::putText(frame, classLabel, cv::Point(left, top), cv::FONT_HERSHEY_DUPLEX, 0.75, cv::Scalar(0, 0, 0), 1);
 }
 
 /**

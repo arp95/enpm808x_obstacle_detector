@@ -4,24 +4,20 @@
  * @date        10/11/2019
  * @brief       Implementation for YOLOv3 class.
  */
+
 #include <YOLOv3.h>
 #include <iterator>
-#include <vector>
-#include <exception>
-#include<opencv2/opencv.hpp>
-#include <opencv2/dnn.hpp>
-#include <opencv2/imgproc.hpp>
-#include <opencv2/highgui.hpp>
-#include <Utils.h>
+
 /**
  * YOLOv3 constructor.
  */
 YOLOv3::YOLOv3() {
-    confThreshold = 0.0;
-    nmsThreshold = 0.0;
+    confThreshold = 0.5;
+    nmsThreshold = 0.4;
     inputWidth = 416;
     inputHeight = 416;
     utils = Utils();
+    utils.addClasses();
 }
 
 /**
@@ -33,6 +29,7 @@ YOLOv3::YOLOv3(float confThresholdValue, float nmsThresholdValue, int inputWidth
     inputWidth = inputWidthValue;
     inputHeight = inputHeightValue;
     utils = Utils();
+    utils.addClasses();
 }
 
 /**
@@ -127,66 +124,65 @@ std::vector<cv::Mat> YOLOv3::run(const cv::Mat& frame) {
  * Postprocessing of the output of yolov3 with nms algorithm.
  */
 void YOLOv3::postprocess(const cv::Mat& frame, std::vector<cv::Mat>& outputs) {
-    int outCounter = 0;
-    int inCounter = 0;
-    int nmsCounter = 0;
     std::vector<int> classIds;
     std::vector<float> confidenceValues;
     std::vector<cv::Rect> nmsBoxes;
     std::vector<cv::Mat>::iterator it;
     std::vector<int>::iterator is;
   
-    // Outer loop
+    // Outer Loop
     for (it = outputs.begin(); it < outputs.end(); it++) {
-        // Pointer to std::vector<cv::Mat> data
-        float* matData = (float*)(outputs[outCounter].data);
-        for (int id = 0; id < outputs[outCounter].rows; id++, matData = matData + outputs[outCounter].cols) {
-            cv::Mat scores = outputs[outCounter].row(inCounter).colRange(5, outputs[outCounter].cols);
+        std::vector<int> rowNumbers;
+        std::vector<int>::iterator iteratorRowNumbers;
+        int row = 0;
+        float* matData = (float*)((*it).data);
+        rowNumbers.resize((*it).rows);
+
+        // Inner Loop
+        for (iteratorRowNumbers = rowNumbers.begin(); iteratorRowNumbers < rowNumbers.end(); iteratorRowNumbers++) {
             cv::Point detPoint;
             double confidences;
-          
-            // Find out the location of the maximum score
+            matData = matData + (*it).cols;
+            cv::Mat scores = (*it).row(row).colRange(5, (*it).cols);
+           
             cv::minMaxLoc(scores, 0, &confidences, 0, &detPoint);
             if (confidences > confThreshold) {
-                int centCoordinateX = (int)(matData[0] * frame.cols);
-                int centCoordinateY = (int)(matData[1] * frame.rows);
-                int width = (int)(matData[2] * frame.cols);
-                int height = (int)(matData[3] * frame.rows);
+                int centCoordinateX = static_cast<int>(matData[0] * frame.cols);
+                int centCoordinateY = static_cast<int>(matData[1] * frame.rows);
+                int width = static_cast<int>(matData[2] * frame.cols);
+                int height = static_cast<int>(matData[3] * frame.rows);
                 int leftTop = centCoordinateX - width / 2;
                 int rightBottom = centCoordinateY - height / 2;
 
                 classIds.push_back(detPoint.x);
-                confidenceValues.push_back((float) confidences);
+                confidenceValues.push_back(static_cast<float>(confidences));
                 nmsBoxes.push_back(cv::Rect(leftTop, rightBottom, width, height));
             }
-            inCounter = inCounter + 1;
+            row = row + 1;
         }
-        outCounter = outCounter + 1;
     }
 
     std::vector<int> indices;
     cv::dnn::NMSBoxes(nmsBoxes, confidenceValues, confThreshold, nmsThreshold, indices);
     for (is = indices.begin(); is < indices.end(); ++is) {
-        ++nmsCounter;
-        int id = indices[nmsCounter];
-        cv::Rect box = nmsBoxes[id];
-        utils.drawBoundingBox(classIds[id], confidenceValues[id], box.x, box.y,
-                          box.x + box.width, box.y + box.height, frame);
+        cv::Rect box = nmsBoxes[(*is)];
+        utils.drawBoundingBox(classIds[(*is)], confidenceValues[(*is)], box.x, box.y, box.x + box.width, box.y + box.height, frame);
     }
 }
 
 /**
- *@brief: Get names/features of output layers of the network.
+ *@brief: Get names/features of the output layers of the network.
  */
 std::vector<std::string> YOLOv3::getOutputLayerNames(const cv::dnn::Net& net) {
-    std::vector<std::string> outputLayerNames;
-    std::vector<std::string> oplNames;
-    std::vector<std::string>::iterator it;
-    outputLayerNames = net.getLayerNames();
-    for (it = outputLayerNames.begin(); it < outputLayerNames.end(); it++) {
-        oplNames.push_back((*it));
+    std::vector<std::string> outputNames;
+    std::vector<std::string> outputLayerNames = net.getLayerNames();
+    std::vector<int> outputLayers = net.getUnconnectedOutLayers();
+
+    std::vector<int>::iterator iteratorOutputLayers;
+    for (iteratorOutputLayers = outputLayers.begin(); iteratorOutputLayers < outputLayers.end(); iteratorOutputLayers++) {
+        outputNames.push_back(outputLayerNames[(*iteratorOutputLayers) - 1]);
     }
-    return oplNames;
+    return outputNames;
 }
 
 YOLOv3::~YOLOv3() {
