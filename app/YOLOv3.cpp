@@ -42,7 +42,7 @@ void YOLOv3::setConfThreshold(float confThresholdValue) {
 /**
  *@brief: Get confThreshold from YOLOv3 class.
  */
-double YOLOv3::getConfThreshold() {
+float YOLOv3::getConfThreshold() {
     return confThreshold;
 }
 
@@ -56,7 +56,7 @@ void YOLOv3::setNmsThreshold(float nmsThresholdValue) {
 /**
  *@brief: Get nmsThreshold from YOLOv3 class.
  */
-double YOLOv3::getNmsThreshold() {
+float YOLOv3::getNmsThreshold() {
     return nmsThreshold;
 }
 
