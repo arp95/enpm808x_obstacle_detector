@@ -60,9 +60,9 @@ class YOLOv3 {
   /**
    * @brief  returns the confThreshold value.
    * @param  no parameter.
-   * @return type double.
+   * @return type float.
    */
-  double getConfThreshold();
+  float getConfThreshold();
 
   /**
    * @brief  sets the nmsThreshold value.
@@ -74,9 +74,9 @@ class YOLOv3 {
   /**
    * @brief  returns the nmsThreshold value.
    * @param  no parameter.
-   * @return type double.
+   * @return type float.
    */
-  double getNmsThreshold();
+  float getNmsThreshold();
 
   /**
    * @brief  sets the inputWidth value.
