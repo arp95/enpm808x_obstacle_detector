@@ -1,11 +1,12 @@
-/* Copyright 2019 Shantam Bajpai, Arpit Aggarwal
- * @file YOLOv3.h
- * @author Shantam Bajpai, Arpit Aggarwal
- */
-
 #ifndef INCLUDE_YOLOV3_H_
 #define INCLUDE_YOLOV3_H_
 
+/* @copyright  MIT License (c) 2019 Shantam Bajpai, Arpit Aggarwal
+ * @file YOLOv3.h
+ * @author Shantam Bajpai, Arpit Aggarwal
+ * @brief YOLOv3 module
+ */
+#pragma once
 #include <Utils.h>
 #include <iostream>
 #include <string>
@@ -13,6 +14,9 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/dnn/dnn.hpp>
 
+/**
+ * @brief YOLOv3 class responsible for running object detection on image or video.
+ */
 class YOLOv3 {
  private:
   /**

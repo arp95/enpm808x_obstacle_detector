@@ -1,16 +1,20 @@
 #ifndef INCLUDE_UTILS_H_
 #define INCLUDE_UTILS_H_
 
-/* Copyright 2019 Arpit Aggarwal, Shantam Bajpai
+/* @copyright  MIT License (c) 2019 Arpit Aggarwal, Shantam Bajpai
  * @file Utils.h
  * @author Arpit Aggarwal, Shantam Bajpai
+ * @brief Utils module
  */
-
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
 #include <opencv2/opencv.hpp>
 
+/**
+ * @brief Utils class used in YOLOv3 class for configuring the cv::dnn::Net.
+ */
 class Utils {
  private:
   /**

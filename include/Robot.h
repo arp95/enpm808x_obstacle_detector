@@ -1,15 +1,19 @@
 #ifndef INCLUDE_ROBOT_H_
 #define INCLUDE_ROBOT_H_
 
-/* Copyright 2019 Arpit Aggarwal, Shantam Bajpai
+/* @copyright  MIT License (c) 2019 Arpit Aggarwal, Shantam Bajpai
  * @file Robot.h
  * @author Arpit Aggarwal, Shantam Bajpai
+ * @brief Robot module
  */
-
+#pragma once
 #include <iostream>
 #include <string>
 #include <YOLOv3.h>
 
+/**
+ * @brief Robot class responsible for running yolov3 on image or video.
+ */
 class Robot {
  private:
   /**
