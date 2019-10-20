@@ -1,11 +1,10 @@
-/**@Copyright (C) 2019 Arpit Aggarwal, Shantam Bajpai
+/**@copyright  MIT License (c) 2019 Arpit Aggarwal, Shantam Bajpai
  * @file        YOLOv3.cpp
  * @author      Arpit Aggarwal, Shantam Bajpai
- * @date        10/11/2019
  * @brief       Implementation for YOLOv3 class.
  */
 
-#include <YOLOv3.h>
+#include "YOLOv3.h"
 #include <iterator>
 #include <opencv2/opencv.hpp>
 #include <opencv2/dnn/dnn.hpp>

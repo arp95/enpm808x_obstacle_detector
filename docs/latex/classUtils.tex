@@ -1,0 +1,227 @@
+\hypertarget{classUtils}{}\section{Utils Class Reference}
+\label{classUtils}\index{Utils@{Utils}}
+
+
+\hyperlink{classUtils}{Utils} class used in \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class for configuring the cv\+::dnn\+::\+Net.  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUtils_a452e78692c87ed5c7c993b6c6ac4981a}{Utils} ()
+\begin{DoxyCompactList}\small\item\em constructor for \hyperlink{classUtils}{Utils} class with no parameters. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classUtils_a1c5e4a32315e780b6b29c02a28bc869a}{get\+Classes\+File} ()
+\begin{DoxyCompactList}\small\item\em returns the classes\+File value. \end{DoxyCompactList}\item 
+void \hyperlink{classUtils_aaa5247cba2b0914b353a1ecd7c41b071}{set\+Classes\+File} (const std\+::string classes\+File\+Value)
+\begin{DoxyCompactList}\small\item\em sets the classes\+File value. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classUtils_ad2bb2f454cbe7d4d3434f134b12144f0}{get\+Model\+Configuration} ()
+\begin{DoxyCompactList}\small\item\em returns the model\+Configuration value. \end{DoxyCompactList}\item 
+void \hyperlink{classUtils_a9b7fb4c851538e0c28fda156a15fa747}{set\+Model\+Configuration} (const std\+::string model\+Configuration\+Value)
+\begin{DoxyCompactList}\small\item\em sets the model\+Configuration value. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classUtils_a5d6c091e309c9591259b7ea5f4d72af6}{get\+Model\+Weights} ()
+\begin{DoxyCompactList}\small\item\em returns the model\+Weights value. \end{DoxyCompactList}\item 
+void \hyperlink{classUtils_a48527a6263a05121fdc8780111f1200d}{set\+Model\+Weights} (const std\+::string model\+Weights\+Value)
+\begin{DoxyCompactList}\small\item\em sets the model\+Weights value. \end{DoxyCompactList}\item 
+void \hyperlink{classUtils_a71aa2a0150a4869ec5e27efebbff509e}{add\+Classes} ()
+\begin{DoxyCompactList}\small\item\em adds classes in std\+::vector$<$std\+::string$>$. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classUtils_afe5833308ad23efb0d838c73bb06c756}{get\+Classes} ()
+\begin{DoxyCompactList}\small\item\em returns classes of type std\+::vector$<$std\+::string$>$. \end{DoxyCompactList}\item 
+void \hyperlink{classUtils_a407700747f1bfe11ce370485f2e6ca78}{draw\+Bounding\+Box} (int class\+Id, double confidence, int left, int top, int right, int bottom, const cv\+::\+Mat \&frame)
+\begin{DoxyCompactList}\small\item\em draws bounding box given the coordinates. \end{DoxyCompactList}\item 
+virtual \hyperlink{classUtils_afa5e70facffc286607498e7edb639b8a}{$\sim$\+Utils} ()\hypertarget{classUtils_afa5e70facffc286607498e7edb639b8a}{}\label{classUtils_afa5e70facffc286607498e7edb639b8a}
+
+\begin{DoxyCompactList}\small\item\em \+: Destructor Definition \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classUtils}{Utils} class used in \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class for configuring the cv\+::dnn\+::\+Net. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Utils@{Utils}!Utils@{Utils}}
+\index{Utils@{Utils}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{Utils()}{Utils()}}]{\setlength{\rightskip}{0pt plus 5cm}Utils\+::\+Utils (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUtils_a452e78692c87ed5c7c993b6c6ac4981a}{}\label{classUtils_a452e78692c87ed5c7c993b6c6ac4981a}
+
+
+constructor for \hyperlink{classUtils}{Utils} class with no parameters. 
+
+\hyperlink{classUtils}{Utils} constructor. 
+
+\subsection{Member Function Documentation}
+\index{Utils@{Utils}!add\+Classes@{add\+Classes}}
+\index{add\+Classes@{add\+Classes}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{add\+Classes()}{addClasses()}}]{\setlength{\rightskip}{0pt plus 5cm}void Utils\+::add\+Classes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUtils_a71aa2a0150a4869ec5e27efebbff509e}{}\label{classUtils_a71aa2a0150a4869ec5e27efebbff509e}
+
+
+adds classes in std\+::vector$<$std\+::string$>$. 
+
+\begin{DoxyReturn}{Returns}
+type void.
+\end{DoxyReturn}
+Adds classes in std\+::vector$<$std\+::string$>$. \index{Utils@{Utils}!draw\+Bounding\+Box@{draw\+Bounding\+Box}}
+\index{draw\+Bounding\+Box@{draw\+Bounding\+Box}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{draw\+Bounding\+Box(int class\+Id, double confidence, int left, int top, int right, int bottom, const cv\+::\+Mat \&frame)}{drawBoundingBox(int classId, double confidence, int left, int top, int right, int bottom, const cv::Mat &frame)}}]{\setlength{\rightskip}{0pt plus 5cm}void Utils\+::draw\+Bounding\+Box (
+\begin{DoxyParamCaption}
+\item[{int}]{class\+Id, }
+\item[{double}]{confidence, }
+\item[{int}]{left, }
+\item[{int}]{top, }
+\item[{int}]{right, }
+\item[{int}]{bottom, }
+\item[{const cv\+::\+Mat \&}]{frame}
+\end{DoxyParamCaption}
+)}\hypertarget{classUtils_a407700747f1bfe11ce370485f2e6ca78}{}\label{classUtils_a407700747f1bfe11ce370485f2e6ca78}
+
+
+draws bounding box given the coordinates. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em class\+Id} & It is the class id. \\
+\hline
+\mbox{\tt in}  & {\em confidence} & It is the confidence value. \\
+\hline
+\mbox{\tt in}  & {\em left} & It refers to the left coordinate. \\
+\hline
+\mbox{\tt in}  & {\em top} & It refers to the top coordinate. \\
+\hline
+\mbox{\tt in}  & {\em right} & It refers to the right coordinate. \\
+\hline
+\mbox{\tt in}  & {\em bottom} & It refers to the bottom coordinate \\
+\hline
+\mbox{\tt in}  & {\em frame} & It refers to the input image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void.
+\end{DoxyReturn}
+Draws bounding box given the coordinates. \index{Utils@{Utils}!get\+Classes@{get\+Classes}}
+\index{get\+Classes@{get\+Classes}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{get\+Classes()}{getClasses()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ Utils\+::get\+Classes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUtils_afe5833308ad23efb0d838c73bb06c756}{}\label{classUtils_afe5833308ad23efb0d838c73bb06c756}
+
+
+returns classes of type std\+::vector$<$std\+::string$>$. 
+
+\begin{DoxyReturn}{Returns}
+type std\+::vector$<$std\+::string$>$.
+\end{DoxyReturn}
+Returns classes of type std\+::vector$<$std\+::string$>$. \index{Utils@{Utils}!get\+Classes\+File@{get\+Classes\+File}}
+\index{get\+Classes\+File@{get\+Classes\+File}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{get\+Classes\+File()}{getClassesFile()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Utils\+::get\+Classes\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUtils_a1c5e4a32315e780b6b29c02a28bc869a}{}\label{classUtils_a1c5e4a32315e780b6b29c02a28bc869a}
+
+
+returns the classes\+File value. 
+
+\begin{DoxyReturn}{Returns}
+type std\+::string.
+\end{DoxyReturn}
+Get classes\+File from \hyperlink{classUtils}{Utils}. \index{Utils@{Utils}!get\+Model\+Configuration@{get\+Model\+Configuration}}
+\index{get\+Model\+Configuration@{get\+Model\+Configuration}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{get\+Model\+Configuration()}{getModelConfiguration()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Utils\+::get\+Model\+Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUtils_ad2bb2f454cbe7d4d3434f134b12144f0}{}\label{classUtils_ad2bb2f454cbe7d4d3434f134b12144f0}
+
+
+returns the model\+Configuration value. 
+
+\begin{DoxyReturn}{Returns}
+type std\+::string.
+\end{DoxyReturn}
+Get model\+Configuration from \hyperlink{classUtils}{Utils}. \index{Utils@{Utils}!get\+Model\+Weights@{get\+Model\+Weights}}
+\index{get\+Model\+Weights@{get\+Model\+Weights}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{get\+Model\+Weights()}{getModelWeights()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Utils\+::get\+Model\+Weights (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUtils_a5d6c091e309c9591259b7ea5f4d72af6}{}\label{classUtils_a5d6c091e309c9591259b7ea5f4d72af6}
+
+
+returns the model\+Weights value. 
+
+\begin{DoxyReturn}{Returns}
+type std\+::string.
+\end{DoxyReturn}
+Get model\+Weights from \hyperlink{classUtils}{Utils}. \index{Utils@{Utils}!set\+Classes\+File@{set\+Classes\+File}}
+\index{set\+Classes\+File@{set\+Classes\+File}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{set\+Classes\+File(const std\+::string classes\+File\+Value)}{setClassesFile(const std::string classesFileValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Utils\+::set\+Classes\+File (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{classes\+File\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classUtils_aaa5247cba2b0914b353a1ecd7c41b071}{}\label{classUtils_aaa5247cba2b0914b353a1ecd7c41b071}
+
+
+sets the classes\+File value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em classes\+File\+Value} & It is the classes filepath. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void.
+\end{DoxyReturn}
+Set classes\+File from \hyperlink{classUtils}{Utils}. \index{Utils@{Utils}!set\+Model\+Configuration@{set\+Model\+Configuration}}
+\index{set\+Model\+Configuration@{set\+Model\+Configuration}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{set\+Model\+Configuration(const std\+::string model\+Configuration\+Value)}{setModelConfiguration(const std::string modelConfigurationValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Utils\+::set\+Model\+Configuration (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{model\+Configuration\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classUtils_a9b7fb4c851538e0c28fda156a15fa747}{}\label{classUtils_a9b7fb4c851538e0c28fda156a15fa747}
+
+
+sets the model\+Configuration value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em model\+Configuration\+Value} & It is the file containing yolov3 configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void.
+\end{DoxyReturn}
+Set model\+Configuration from \hyperlink{classUtils}{Utils}. \index{Utils@{Utils}!set\+Model\+Weights@{set\+Model\+Weights}}
+\index{set\+Model\+Weights@{set\+Model\+Weights}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{set\+Model\+Weights(const std\+::string model\+Weights\+Value)}{setModelWeights(const std::string modelWeightsValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Utils\+::set\+Model\+Weights (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{model\+Weights\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classUtils_a48527a6263a05121fdc8780111f1200d}{}\label{classUtils_a48527a6263a05121fdc8780111f1200d}
+
+
+sets the model\+Weights value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em model\+Weights\+Value} & It is the file containing yolov3 weights. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void.
+\end{DoxyReturn}
+Set model\+Weights from \hyperlink{classUtils}{Utils}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Utils.\+h\item 
+app/\hyperlink{Utils_8cpp}{Utils.\+cpp}\end{DoxyCompactItemize}

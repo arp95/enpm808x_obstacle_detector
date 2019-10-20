@@ -1,0 +1,183 @@
+\hypertarget{classRobot}{}\section{Robot Class Reference}
+\label{classRobot}\index{Robot@{Robot}}
+
+
+\hyperlink{classRobot}{Robot} class responsible for running yolov3 on image or video.  
+
+
+
+
+{\ttfamily \#include $<$Robot.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}{Robot} ()
+\begin{DoxyCompactList}\small\item\em constructor for \hyperlink{classRobot}{Robot} class with no parameters. \end{DoxyCompactList}\item 
+void \hyperlink{classRobot_a781858a767a786b864c7f1fc78721524}{set\+Is\+Image} (bool is\+Image\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the is\+Image value. \end{DoxyCompactList}\item 
+bool \hyperlink{classRobot_a554c0e1616b48ed356db58a7fa523215}{get\+Is\+Image} ()
+\begin{DoxyCompactList}\small\item\em returns the is\+Image value. \end{DoxyCompactList}\item 
+void \hyperlink{classRobot_ad92bd0b6855a8579c7e230ddaddbc598}{set\+Is\+Video} (bool is\+Video\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the is\+Video value. \end{DoxyCompactList}\item 
+bool \hyperlink{classRobot_a4a37b5e8cb83c89c7e2c180ca9937b17}{get\+Is\+Video} ()
+\begin{DoxyCompactList}\small\item\em returns the is\+Video value. \end{DoxyCompactList}\item 
+void \hyperlink{classRobot_a3a2bc11a8ef019a4bae354bc3ac0de86}{check\+Parser} (cv\+::\+Command\+Line\+Parser parser)
+\begin{DoxyCompactList}\small\item\em updates is\+Video and is\+Image values. \end{DoxyCompactList}\item 
+void \hyperlink{classRobot_a069bd7ac190af21faaeebae6a26ac340}{process\+Image} ()
+\begin{DoxyCompactList}\small\item\em processes the image and updates the image with bounding boxes. \end{DoxyCompactList}\item 
+void \hyperlink{classRobot_ab06570394ae53dae4fe351598081ba68}{process\+Video} ()
+\begin{DoxyCompactList}\small\item\em processes the video and updates the video frames with bounding boxes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classRobot}{Robot} class responsible for running yolov3 on image or video. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Robot@{Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{Robot()}{Robot()}}]{\setlength{\rightskip}{0pt plus 5cm}Robot\+::\+Robot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}{}\label{classRobot_a4fc7c70ae20623f05e06f2ecb388b6c4}
+
+
+constructor for \hyperlink{classRobot}{Robot} class with no parameters. 
+
+\hyperlink{classRobot}{Robot} constructor. 
+
+\subsection{Member Function Documentation}
+\index{Robot@{Robot}!check\+Parser@{check\+Parser}}
+\index{check\+Parser@{check\+Parser}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{check\+Parser(cv\+::\+Command\+Line\+Parser parser)}{checkParser(cv::CommandLineParser parser)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::check\+Parser (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Command\+Line\+Parser}]{parser}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_a3a2bc11a8ef019a4bae354bc3ac0de86}{}\label{classRobot_a3a2bc11a8ef019a4bae354bc3ac0de86}
+
+
+updates is\+Video and is\+Image values. 
+
+\+: Updates the is\+Video and is\+Image value and sets the image\+Path and video\+Path.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em parser} & It containes information about the imagepath and videopath. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+\index{Robot@{Robot}!get\+Is\+Image@{get\+Is\+Image}}
+\index{get\+Is\+Image@{get\+Is\+Image}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{get\+Is\+Image()}{getIsImage()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+::get\+Is\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_a554c0e1616b48ed356db58a7fa523215}{}\label{classRobot_a554c0e1616b48ed356db58a7fa523215}
+
+
+returns the is\+Image value. 
+
+\+: Returns the is\+Image value.
+
+\begin{DoxyReturn}{Returns}
+type bool. 
+\end{DoxyReturn}
+\index{Robot@{Robot}!get\+Is\+Video@{get\+Is\+Video}}
+\index{get\+Is\+Video@{get\+Is\+Video}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{get\+Is\+Video()}{getIsVideo()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+::get\+Is\+Video (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_a4a37b5e8cb83c89c7e2c180ca9937b17}{}\label{classRobot_a4a37b5e8cb83c89c7e2c180ca9937b17}
+
+
+returns the is\+Video value. 
+
+\+: Returns the is\+Video value.
+
+\begin{DoxyReturn}{Returns}
+type bool. 
+\end{DoxyReturn}
+\index{Robot@{Robot}!process\+Image@{process\+Image}}
+\index{process\+Image@{process\+Image}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{process\+Image()}{processImage()}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::process\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_a069bd7ac190af21faaeebae6a26ac340}{}\label{classRobot_a069bd7ac190af21faaeebae6a26ac340}
+
+
+processes the image and updates the image with bounding boxes. 
+
+\+: Processes the image and updates the image with bounding boxes.
+
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+\index{Robot@{Robot}!process\+Video@{process\+Video}}
+\index{process\+Video@{process\+Video}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{process\+Video()}{processVideo()}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::process\+Video (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_ab06570394ae53dae4fe351598081ba68}{}\label{classRobot_ab06570394ae53dae4fe351598081ba68}
+
+
+processes the video and updates the video frames with bounding boxes. 
+
+\+: Processes the video and updates the video frames with bounding boxes.
+
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+\index{Robot@{Robot}!set\+Is\+Image@{set\+Is\+Image}}
+\index{set\+Is\+Image@{set\+Is\+Image}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{set\+Is\+Image(bool is\+Image\+Value)}{setIsImage(bool isImageValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::set\+Is\+Image (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Image\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_a781858a767a786b864c7f1fc78721524}{}\label{classRobot_a781858a767a786b864c7f1fc78721524}
+
+
+Sets the is\+Image value. 
+
+\+: Sets the is\+Image value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em is\+Image\+Value} & It is a variable that tells whether it is an image or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+\index{Robot@{Robot}!set\+Is\+Video@{set\+Is\+Video}}
+\index{set\+Is\+Video@{set\+Is\+Video}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{set\+Is\+Video(bool is\+Video\+Value)}{setIsVideo(bool isVideoValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::set\+Is\+Video (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Video\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_ad92bd0b6855a8579c7e230ddaddbc598}{}\label{classRobot_ad92bd0b6855a8579c7e230ddaddbc598}
+
+
+Sets the is\+Video value. 
+
+\+: Sets the is\+Video value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em is\+Video\+Value} & It is a variable that tells whether it is an video or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Robot.\+h\item 
+app/\hyperlink{Robot_8cpp}{Robot.\+cpp}\end{DoxyCompactItemize}

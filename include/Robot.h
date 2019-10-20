@@ -43,55 +43,51 @@ class Robot {
 
  public:
   /**
-   * @brief  constructor for Robot class with no parameters.
+   * @brief constructor for Robot class with no parameters.
    */
   Robot();
 
   /**
-   * @brief  Sets the isImage value.
-   * @param  one parameter, which is the isImageValue.
+   * @brief Sets the isImage value.
+   * @param[in] isImageValue It is a variable that tells whether it is an image or not.
    * @return type void.
    */
   void setIsImage(bool isImageValue);
 
   /**
-   * @brief  returns the isImage value.
-   * @param  no parameter.
+   * @brief returns the isImage value.
    * @return type bool.
    */
   bool getIsImage();
 
   /**
-   * @brief  Sets the isVideo value.
-   * @param  one parameter, which is the isVideoValue.
+   * @brief Sets the isVideo value.
+   * @param[in] isVideoValue It is a variable that tells whether it is an video or not.
    * @return type void.
    */
   void setIsVideo(bool isVideoValue);
 
   /**
    * @brief  returns the isVideo value.
-   * @param  no parameter.
    * @return type bool.
    */
   bool getIsVideo();
 
   /**
-   * @brief  updates isVideo and isImage values.
-   * @param  one parameter, which is the parser.
+   * @brief updates isVideo and isImage values.
+   * @param[in] parser It containes information about the imagepath and videopath.
    * @return type void.
    */
   void checkParser(cv::CommandLineParser parser);
 
   /**
-   * @brief  processes the image and updates the image with bounding boxes.
-   * @param  no parameters.
+   * @brief processes the image and updates the image with bounding boxes.
    * @return type void.
    */
   void processImage();
 
   /**
-   * @brief  processes the video and updates the video frames with bounding boxes.
-   * @param  no parameters.
+   * @brief processes the video and updates the video frames with bounding boxes.
    * @return type void.
    */
   void processVideo();
