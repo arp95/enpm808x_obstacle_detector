@@ -103,10 +103,9 @@ class Utils {
   void drawBoundingBox(int classId, double confidence, int left, int top, int right, int bottom, const cv::Mat & frame);
 
   /*
-   * @ brief: Destructor for class Utils
+   * @brief: Destructor for class Utils
    *
    */
-
   virtual ~Utils();
 };
 #endif  // INCLUDE_UTILS_H_

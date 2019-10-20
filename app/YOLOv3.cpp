@@ -7,6 +7,8 @@
 
 #include <YOLOv3.h>
 #include <iterator>
+#include <opencv2/opencv.hpp>
+#include <opencv2/dnn/dnn.hpp>
 
 /**
  * YOLOv3 constructor.
@@ -140,7 +142,6 @@ void YOLOv3::postprocess(const cv::Mat& frame, std::vector<cv::Mat>& outputs) {
             double confidences;
             matData = matData + (*it).cols;
             cv::Mat scores = (*it).row(row).colRange(5, (*it).cols);
-           
             cv::minMaxLoc(scores, 0, &confidences, 0, &detPoint);
             if (confidences > confThreshold) {
                 int centCoordinateX = static_cast<int>(matData[0] * frame.cols);

@@ -46,7 +46,7 @@ class Robot {
   /**
    * @brief  Sets the isImage value.
    * @param  one parameter, which is the isImageValue.
-   * @return type bool.
+   * @return type void.
    */
   void setIsImage(bool isImageValue);
 
@@ -60,7 +60,7 @@ class Robot {
   /**
    * @brief  Sets the isVideo value.
    * @param  one parameter, which is the isVideoValue.
-   * @return type bool.
+   * @return type void.
    */
   void setIsVideo(bool isVideoValue);
 
@@ -72,8 +72,8 @@ class Robot {
   bool getIsVideo();
 
   /**
-   * @brief  updates the isVideo and isImage value.
-   * @param  no parameter.
+   * @brief  updates isVideo and isImage values.
+   * @param  one parameter, which is the parser.
    * @return type void.
    */
   void checkParser(cv::CommandLineParser parser);

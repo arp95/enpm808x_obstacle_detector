@@ -1,6 +1,6 @@
 /* Copyright 2019 Shantam Bajpai, Arpit Aggarwal
  * @file YOLOv3.h
- * @author Shantam Bajpi, Arpit Aggarwal
+ * @author Shantam Bajpai, Arpit Aggarwal
  */
 
 #ifndef INCLUDE_YOLOV3_H_
@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <opencv2/opencv.hpp>
 #include <opencv2/dnn/dnn.hpp>
 
 class YOLOv3 {
@@ -132,12 +133,11 @@ class YOLOv3 {
    * @param  one parameter, which is the cv::dnn::net.
    * @return type std::vector<std::string>.
    */
-  std::vector<std::string> getOutputLayerNames(const cv::dnn::Net & net);
+  std::vector<std::string> getOutputLayerNames(const cv::dnn::Net& net);
 
   /*
    * @brief: Destructor for YOLOv3
    */
-
   virtual ~YOLOv3();
 };
 #endif  // INCLUDE_YOLOV3_H_

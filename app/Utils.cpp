@@ -6,6 +6,7 @@
  */
 
 #include <Utils.h>
+#include <opencv2/opencv.hpp>
 
 /**
  * Utils constructor.
