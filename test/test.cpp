@@ -1,25 +1,24 @@
 /**
- * Copyright 2019 Shantam Bajpai and Arpit Aggarwal
+ * @copyright  MIT License (c) 2019 Shantam Bajpai and Arpit Aggarwal
  * @file  test.cpp
  * @brief Test source file for enpm808x_obstacle_detector
  *        Contains the required headers and methods.
  * @author Shantam Bajpai and Arpit Aggarwal
- * @date  13th October 2019
  * @version 1.0
  *
  */
 
 #include <gtest/gtest.h>
-#include <Robot.h>
-#include <Utils.h>
-#include <YOLOv3.h>
+#include "Robot.h"
+#include "Utils.h"
+#include "YOLOv3.h"
 #include <vector>
+#include <string>
 
-YOLOv3 yv3(1, 1, 1, 1);
-Robot f;
-Utils Util;
+YOLOv3 yolov3(1, 1, 1, 1);
+Robot robot;
+Utils util;
 double val = 2;
-int val1;
 
 /**
  * @brief Test case for setConfThreshold method of YOLOv3 class. The
@@ -27,8 +26,8 @@ int val1;
  * by the getConfThreshold method.
  */
 TEST(checkGetterSetter, checkConfThreshold) {
-  yv3.setConfThreshold(val);
-  EXPECT_EQ(yv3.getConfThreshold(), val);
+  yolov3.setConfThreshold(val);
+  EXPECT_EQ(yolov3.getConfThreshold(), val);
 }
 
 /**
@@ -37,8 +36,8 @@ TEST(checkGetterSetter, checkConfThreshold) {
  * by the getNmsThreshold method.
  */
 TEST(checkGetterSetter, checknmsThreshold) {
-  yv3.setNmsThreshold(val);
-  EXPECT_EQ(yv3.getNmsThreshold(), val);
+  yolov3.setNmsThreshold(val);
+  EXPECT_EQ(yolov3.getNmsThreshold(), val);
 }
 
 /**
@@ -47,8 +46,8 @@ TEST(checkGetterSetter, checknmsThreshold) {
  * by the getInputWidth method.
  */
 TEST(checkGetterSetter, checkInputWidth) {
-  yv3.setInputWidth(val);
-  EXPECT_EQ(yv3.getInputWidth(), val1);
+  yolov3.setInputWidth(val);
+  EXPECT_EQ(yolov3.getInputWidth(), val);
 }
 
 /**
@@ -57,8 +56,8 @@ TEST(checkGetterSetter, checkInputWidth) {
  * by the getInputHeight method.
  */
 TEST(checkGetterSetter, checkInputHeight) {
-  yv3.setInputHeight(val);
-  EXPECT_EQ(yv3.getInputHeight(), val1);
+  yolov3.setInputHeight(val);
+  EXPECT_EQ(yolov3.getInputHeight(), val);
 }
 
 /**
@@ -66,8 +65,8 @@ TEST(checkGetterSetter, checkInputHeight) {
  * test checks whether the boolean value for getIsImage method.
  */
 TEST(checkBoolSetterGetter, checkIsImage) {
-  f.setIsImage(0);
-  EXPECT_EQ(f.getIsImage(), 0);
+  robot.setIsImage(0);
+  EXPECT_EQ(robot.getIsImage(), 0);
 }
 
 /**
@@ -75,38 +74,39 @@ TEST(checkBoolSetterGetter, checkIsImage) {
  * test checks whether the boolean value for getIsImage method.
  */
 TEST(checkBoolSetterGetter, checkIsVideo) {
-  f.setIsVideo(1);
-  EXPECT_EQ(f.getIsVideo(), 1);
+  robot.setIsVideo(1);
+  EXPECT_EQ(robot.getIsVideo(), 1);
 }
 
 /**
  * @brief Test case for getClassesFile method of Utils class.
  */
 TEST(checkUtilsGetterSetter, checkClassesFile) {
-  Util.setClassesFile("arpit");
-  EXPECT_EQ(Util.getClassesFile(), "arpit");
+  util.setClassesFile("arpit");
+  EXPECT_EQ(util.getClassesFile(), "arpit");
 }
 
 /**
  * @brief Test case for getModelConfiguration method of Utils class.
  */
 TEST(checkUtilsGetterSetter, checkModelConfigurationFile) {
-  Util.setModelConfiguration("shantam");
-  EXPECT_EQ(Util.getModelConfiguration(), "shantam");
+  util.setModelConfiguration("shantam");
+  EXPECT_EQ(util.getModelConfiguration(), "shantam");
 }
 
 /**
  * @brief Test case for getModelWeights method of Utils class.
  */
 TEST(checkUtilsGetterSetter, checkModelWeightsFile) {
-  Util.setModelWeights("shantam");
-  EXPECT_EQ(Util.getModelWeights(), "shantam");
+  util.setModelWeights("shantam");
+  EXPECT_EQ(util.getModelWeights(), "shantam");
 }
 
 /**
  * @brief Test case for getClasses method of Utils class.
  */
 TEST(checkUtilsGetterSetter, checkClassesSize) {
-  std::vector<std::string> classes = Util.getClasses();
+  util.addClasses();
+  std::vector<std::string> classes = util.getClasses();
   EXPECT_EQ(classes.size(), 0);
 }
