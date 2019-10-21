@@ -49,6 +49,34 @@ bool Robot::getIsVideo() {
 }
 
 /**
+ * @brief: Returns the videoPath value.
+ */
+std::string Robot::getVideoPath() {
+    return videoPath;
+}
+
+/**
+ * @brief: Returns the imagePath value.
+ */
+std::string Robot::getImagePath() {
+    return imagePath;
+}
+
+/**
+ * @brief: Sets the videoPath value.
+ */
+void Robot::setVideoPath(std::string videoPathValue) {
+    videoPath = videoPathValue;
+}
+
+/**
+ * @brief: Sets the imagePath value.
+ */
+void Robot::setImagePath(std::string imagePathValue) {
+    imagePath = imagePathValue;
+}
+
+/**
  * @brief: Updates the isVideo and isImage value and sets the imagePath and videoPath.
  */
 int Robot::checkParser(cv::CommandLineParser parser) {

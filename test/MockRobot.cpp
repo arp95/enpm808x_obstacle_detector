@@ -48,11 +48,28 @@ TEST(checkBoolSetterGetter, checkParser) {
 }
 
 /**
+ * @brief Test case for getImagePath method of Robot class.
+ */
+TEST(checkBoolSetterGetter, checkGetImagePath) {
+  robot.setImagePath("image");
+  EXPECT_EQ(robot.getImagePath(), "image");
+}
+
+/**
+ * @brief Test case for getVideoPath method of Robot class.
+ */
+TEST(checkBoolSetterGetter, checkGetVideoPath) {
+  robot.setVideoPath("video");
+  EXPECT_EQ(robot.getVideoPath(), "video");
+}
+
+/**
  * @brief Test case for processImage method of Robot class. The
  * test verifies that processImage doesnt throw an exception.
  */
 
 TEST(checkProcessImage, noExceptionThrown) {
+  robot.setImagePath("../sample.jpg");
   EXPECT_NO_THROW( {
     robot.processImage()
     ;
@@ -68,6 +85,7 @@ TEST(checkProcessImage, noExceptionThrown) {
  * test verifies that processVideo doesnt throw an exception.
  */
 TEST(checkProcessVideo, noExceptionThrown) {
+  robot.setVideoPath("../sample.avi");
   EXPECT_NO_THROW( {
     robot.processVideo()
     ;

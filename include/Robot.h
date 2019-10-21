@@ -74,6 +74,32 @@ class Robot {
   bool getIsVideo();
 
   /**
+   * @brief  returns the videoPath value.
+   * @return type std::string.
+   */
+  std::string getVideoPath();
+
+  /**
+   * @brief Sets the videoPath value.
+   * @param[in] videoPathValue It is a variable that sets videoPath value.
+   * @return type void.
+   */
+  void setVideoPath(std::string videoPathValue);
+
+  /**
+   * @brief  returns the imagePath value.
+   * @return type std::string.
+   */
+  std::string getImagePath();
+
+  /**
+   * @brief Sets the imagePath value.
+   * @param[in] imagePathValue It is a variable that sets imagePath value.
+   * @return type void.
+   */
+  void setImagePath(std::string imagePathValue);
+
+  /**
    * @brief updates isVideo and isImage values.
    * @param[in] parser It containes information about the imagepath and videopath.
    * @return type int.
