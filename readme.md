@@ -16,12 +16,13 @@ Arpit Aggarwal: I am a first year graduate student pursuing my masters degree in
 For a robot to navigate autonomously in a given region it should have the capability to efficiently detect and avoid the obstacles that might come in its path. In this projecct we have developed a real time object detection classifier for ACME Robotics. The output obtained by the module can be used by the path planning component of the robotic system. 
 The YOLOv3 object detector algorithm has been used for this on a pre-trained COCO Dataset.
 
-	1. The module will take an nxn sized input image/video frames and will preprocess each image/frame and convert it into a blob.
-	2. The output blob will then be passed as an input to the pre-trained YOLOv3 algorithm which will return a list of bounding boxes for the input image.
-	3. After the output is obtained it will be passed for postprocessing and the anchor boxes with low confidence scores will be suppressed using non max suppresion.
+1. The module will take an nxn sized input image/video frames and will preprocess each image/frame and convert it into an output blob.
+2. The output blob will then be passed as an input to the pre-trained YOLOv3 algorithm which will return a list of bounding boxes for the input image or input video.
+3. After the output is obtained it will be passed for postprocessing and the anchor boxes with low confidence scores will be suppressed using non max suppresion.
 
 ## Output of the Project 
-![output_yolov3_image](https://user-images.githubusercontent.com/51986101/67231983-62740180-f40e-11e9-8765-671b629390f9.jpg)
+### Image Output and Video Screenshot output
+![Video output Screenshot](https://user-images.githubusercontent.com/51986101/67233060-8a646480-f410-11e9-9037-d19de4808f3a.png) 
 
 ## Dependencies
 [![OpenCV Installation](https://img.shields.io/badge/OpenCV4.0.0-Clickhere-brightgreen.svg?style=flat)](https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html)
@@ -29,8 +30,8 @@ The YOLOv3 object detector algorithm has been used for this on a pre-trained COC
 ## Standard install via command-line
 ```
 git clone --recursive https://github.com/arp95/enpm808x_obstacle_detector.git
-bash yolov3_requirements.sh
 cd <path to repository>
+bash yolov3_requirements.sh
 mkdir build
 cd build
 cmake ../
@@ -39,6 +40,7 @@ Run program(For the sample image): ./app/shell-app --image=../sample.jpg
 Run Program(For the sample video): ./app/shell-app --video=../sample.avi
 Run tests: ./test/cpp-test
 ```
+After you run the program the output is saved in the same directory as that of the working directory by the names of sample_yolov3_output.jpg and sample_yolov3_output.avi
 
 ## Working with Eclipse IDE ##
 
@@ -49,7 +51,6 @@ In your Eclipse workspace directory (or create a new one), checkout the repo (an
 mkdir -p ~/workspace
 cd ~/workspace
 git clone --recursive https://github.com/arp95/enpm808x_obstacle_detector.git
-bash yolov3_requirements.sh
 
 ```
 
@@ -57,6 +58,7 @@ In your work directory, use cmake to create an Eclipse project for an [out-of-so
 
 ```
 cd ~/workspace
+bash yolov3_requirements.sh
 mkdir -p enpm808x_build
 cd enpm808x_build
 cmake -G  "Eclipse CDT4 - Unix Makefiles" ../enpm808x_obstacle_detector/
