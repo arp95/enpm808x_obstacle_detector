@@ -70,13 +70,11 @@ TEST(checkBoolSetterGetter, checkGetVideoPath) {
 
 TEST(checkProcessImage, noExceptionThrown) {
   robot.setImagePath("../sample.jpg");
-  EXPECT_NO_THROW( {
-    robot.processImage()
-    ;
+  EXPECT_NO_THROW({
+    robot.processImage();
   });
     EXPECT_NO_FATAL_FAILURE( {
-    robot.processImage()
-    ;
+    robot.processImage();
   });
 }
 
@@ -86,12 +84,10 @@ TEST(checkProcessImage, noExceptionThrown) {
  */
 TEST(checkProcessVideo, noExceptionThrown) {
   robot.setVideoPath("../sample.avi");
-  EXPECT_NO_THROW( {
-    robot.processVideo()
-    ;
+  EXPECT_NO_THROW({
+    robot.processVideo();
   });
   EXPECT_NO_FATAL_FAILURE( {
-    robot.processVideo()
-    ;
+    robot.processVideo();
   });
 }

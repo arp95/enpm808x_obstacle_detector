@@ -11,7 +11,8 @@
 #include <gtest/gtest.h>
 #include "YOLOv3.h"
 
-YOLOv3 yolov3;
+YOLOv3 yolov31;
+YOLOv3 yolov32(0.5, 0.4, 416, 416);
 double val = 2;
 
 /**
@@ -20,8 +21,8 @@ double val = 2;
  * by the getConfThreshold method.
  */
 TEST(checkGetterSetter, checkConfThreshold) {
-  yolov3.setConfThreshold(val);
-  EXPECT_EQ(yolov3.getConfThreshold(), val);
+  yolov31.setConfThreshold(val);
+  EXPECT_EQ(yolov31.getConfThreshold(), val);
 }
 
 /**
@@ -30,8 +31,8 @@ TEST(checkGetterSetter, checkConfThreshold) {
  * by the getNmsThreshold method.
  */
 TEST(checkGetterSetter, checknmsThreshold) {
-  yolov3.setNmsThreshold(val);
-  EXPECT_EQ(yolov3.getNmsThreshold(), val);
+  yolov31.setNmsThreshold(val);
+  EXPECT_EQ(yolov31.getNmsThreshold(), val);
 }
 
 /**
@@ -40,8 +41,8 @@ TEST(checkGetterSetter, checknmsThreshold) {
  * by the getInputWidth method.
  */
 TEST(checkGetterSetter, checkInputWidth) {
-  yolov3.setInputWidth(val);
-  EXPECT_EQ(yolov3.getInputWidth(), val);
+  yolov32.setInputWidth(val);
+  EXPECT_EQ(yolov32.getInputWidth(), val);
 }
 
 /**
@@ -50,54 +51,39 @@ TEST(checkGetterSetter, checkInputWidth) {
  * by the getInputHeight method.
  */
 TEST(checkGetterSetter, checkInputHeight) {
-  yolov3.setInputHeight(val);
-  EXPECT_EQ(yolov3.getInputHeight(), val);
+  yolov32.setInputHeight(val);
+  EXPECT_EQ(yolov32.getInputHeight(), val);
 }
 
 /**
- * @brief Test case for postProcess method. Checks for any fatal error
+ * @brief Test case for preprocess method. Checks for any fatal error.
  */
-
-/*TEST(checkPostProcess , inputFrames) {
-  cv::VideoCapture capture;
-  std::ifstream videoFile("/home/arpitdec5/Desktop/enpm808x_midterm/outputs/input_videos/run_yolov3_output.avi");
-  capture.open(videoPath);
-  cv::Mat frame;
-  std::vector<cv::Mat> outputs;
-  capture >> frame;
-  std::cout << frame.rows << std::endl;
-  EXPECT_NO_FATAL_FAILURE( {
-    yolov3.postprocess(frame, outputs)
-    ;
+TEST(checkPreProcess, inputFrames) {
+  cv::Mat frame = cv::imread("../sample.jpg");
+  EXPECT_NO_FATAL_FAILURE({
+    yolov31.preprocess(frame);
   });
-}*/
-
-/**
- * @brief Test case for preProcess method. Checks for any fatal error
- */
-
-/*TEST(checkPreProcess , inputFrames) {
-cv::VideoCapture video("/outputs/run_yolov3_output.avi");
-  cv::Mat frame;
-  video >> frame;
-  EXPECT_NO_FATAL_FAILURE( {
-  yv3.preprocess(frame)
-    ;
-  }
-);
 }
 
 /**
- * @brief Test case for preProcess method. Checks for any fatal error
+ * @brief Test case for run method. Checks for any fatal error.
  */
-
-/*TEST(checkRunMethod , inputFrames) {
-cv::VideoCapture video("../outputs/run_yolov3_output.avi");
-cv::Mat frame;
-video >> frame;
-EXPECT_NO_FATAL_FAILURE( {
-yv3.run(frame)
-;
+TEST(checkRun, inputFrames) {
+  cv::Mat frame = cv::imread("../sample.jpg");
+  yolov31.preprocess(frame);
+  EXPECT_NO_FATAL_FAILURE({
+    std::vector<cv::Mat> outputs = yolov31.run(frame);
+  });
 }
-);
- }*/
+
+/**
+ * @brief Test case for postprocess method. Checks for any fatal error.
+ */
+TEST(checkPostProcess , inputFrames) {
+  cv::Mat frame = cv::imread("../sample.jpg");
+  yolov31.preprocess(frame);
+  std::vector<cv::Mat> outputs = yolov31.run(frame);
+  EXPECT_NO_FATAL_FAILURE({
+    yolov31.postprocess(frame, outputs);
+  });
+}
