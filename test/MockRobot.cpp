@@ -61,9 +61,8 @@ EXPECT_NO_THROW( {
 }
 );
 EXPECT_NO_FATAL_FAILURE( {
-  robo.processImage()
+  robo.processVideo()
   ;
 }
 );
 }
-

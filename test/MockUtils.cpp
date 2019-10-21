@@ -45,3 +45,15 @@ TEST(checkUtilsGetterSetter, checkClassesSize) {
   std::vector<std::string> classes = Util.getClasses();
   EXPECT_EQ(classes.size(), 0);
 }
+
+/**
+ * @brief Test case for addClasses method of Utils class.
+ */
+
+TEST(checkAddClasses, checkForCorrectInput) {
+  EXPECT_NO_FATAL_FAILURE( {
+    Util.addClasses()
+    ;
+  }
+);
+}

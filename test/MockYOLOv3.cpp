@@ -57,6 +57,45 @@ TEST(checkGetterSetter, checkInputHeight) {
 }
 
 /**
- * @brief Test case for getOutputLayerNames method. Checks whether
- * output layer names have been obtained or not
+ * @brief Test case for postProcess method. Checks for any fatal error
  */
+TEST(checkPostProcess , inputFrames) {
+  cv::VideoCapture video("/outputs/run_yolov3_output.avi");
+  cv::Mat frame;
+  std::vector<cv::Mat> outputs;
+  video >> frame;
+  EXPECT_NO_FATAL_FAILURE( {
+    yv3.postprocess(frame, outputs)
+    ;
+  }
+);
+}
+/**
+ * @brief Test case for preProcess method. Checks for any fatal error
+ */
+
+/*TEST(checkPreProcess , inputFrames) {
+cv::VideoCapture video("/outputs/run_yolov3_output.avi");
+  cv::Mat frame;
+  video >> frame;
+  EXPECT_NO_FATAL_FAILURE( {
+  yv3.preprocess(frame)
+    ;
+  }
+);
+}
+
+/**
+ * @brief Test case for preProcess method. Checks for any fatal error
+ */
+
+/*TEST(checkRunMethod , inputFrames) {
+cv::VideoCapture video("../outputs/run_yolov3_output.avi");
+cv::Mat frame;
+video >> frame;
+EXPECT_NO_FATAL_FAILURE( {
+yv3.run(frame)
+;
+}
+);
+ }*/
