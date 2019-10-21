@@ -1,19 +1,17 @@
 /**
- * Copyright 2019 Shantam Bajpai and Arpit Aggarwal
+ * @copyright  MIT License (c) 2019 Shantam Bajpai and Arpit Aggarwal
  * @file  MockYOLOv3.cpp
  * @brief Solitary Test source file for testing the YOLOv3
  *        class methods. Includes all the required headers
  * @author Shantam Bajpai and Arpit Aggarwal
- * @date  13th October 2019
  * @version 1.0
  *
  */
 
 #include <gtest/gtest.h>
-#include <YOLOv3.h>
+#include "YOLOv3.h"
 
-YOLOv3 yv3;
-
+YOLOv3 yolov3;
 double val = 2;
 
 /**
@@ -22,8 +20,8 @@ double val = 2;
  * by the getConfThreshold method.
  */
 TEST(checkGetterSetter, checkConfThreshold) {
-  yv3.setConfThreshold(val);
-  EXPECT_EQ(yv3.getConfThreshold(), val);
+  yolov3.setConfThreshold(val);
+  EXPECT_EQ(yolov3.getConfThreshold(), val);
 }
 
 /**
@@ -32,8 +30,8 @@ TEST(checkGetterSetter, checkConfThreshold) {
  * by the getNmsThreshold method.
  */
 TEST(checkGetterSetter, checknmsThreshold) {
-  yv3.setNmsThreshold(val);
-  EXPECT_EQ(yv3.getNmsThreshold(), val);
+  yolov3.setNmsThreshold(val);
+  EXPECT_EQ(yolov3.getNmsThreshold(), val);
 }
 
 /**
@@ -42,8 +40,8 @@ TEST(checkGetterSetter, checknmsThreshold) {
  * by the getInputWidth method.
  */
 TEST(checkGetterSetter, checkInputWidth) {
-  yv3.setInputWidth(val);
-  EXPECT_EQ(yv3.getInputWidth(), val);
+  yolov3.setInputWidth(val);
+  EXPECT_EQ(yolov3.getInputWidth(), val);
 }
 
 /**
@@ -52,24 +50,28 @@ TEST(checkGetterSetter, checkInputWidth) {
  * by the getInputHeight method.
  */
 TEST(checkGetterSetter, checkInputHeight) {
-  yv3.setInputHeight(val);
-  EXPECT_EQ(yv3.getInputHeight(), val);
+  yolov3.setInputHeight(val);
+  EXPECT_EQ(yolov3.getInputHeight(), val);
 }
 
 /**
  * @brief Test case for postProcess method. Checks for any fatal error
  */
-TEST(checkPostProcess , inputFrames) {
-  cv::VideoCapture video("/outputs/run_yolov3_output.avi");
+
+/*TEST(checkPostProcess , inputFrames) {
+  cv::VideoCapture capture;
+  std::ifstream videoFile("/home/arpitdec5/Desktop/enpm808x_midterm/outputs/input_videos/run_yolov3_output.avi");
+  capture.open(videoPath);
   cv::Mat frame;
   std::vector<cv::Mat> outputs;
-  video >> frame;
+  capture >> frame;
+  std::cout << frame.rows << std::endl;
   EXPECT_NO_FATAL_FAILURE( {
-    yv3.postprocess(frame, outputs)
+    yolov3.postprocess(frame, outputs)
     ;
-  }
-);
-}
+  });
+}*/
+
 /**
  * @brief Test case for preProcess method. Checks for any fatal error
  */
