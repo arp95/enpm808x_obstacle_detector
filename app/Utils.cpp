@@ -1,12 +1,18 @@
-/**@Copyright (C) 2019 Arpit Aggarwal, Shantam Bajpai
+/**@copyright  MIT License (c) 2019 Arpit Aggarwal, Shantam Bajpai
  * @file        Utils.cpp
  * @author      Arpit Aggarwal, Shantam Bajpai
- * @date        10/11/2019
  * @brief       Implementation for Utils class.
  */
 
+<<<<<<< HEAD
 #include <Utils.h>
 #include <fstream>
+=======
+#include "Utils.h"
+#include <fstream>
+#include <opencv2/opencv.hpp>
+
+>>>>>>> 8b74738043b7ecfe61d873ba8cee4ab945010f54
 /**
  * Utils constructor.
  */

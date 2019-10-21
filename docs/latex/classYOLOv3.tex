@@ -1,0 +1,315 @@
+\hypertarget{classYOLOv3}{}\section{Y\+O\+L\+Ov3 Class Reference}
+\label{classYOLOv3}\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+
+
+\hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class responsible for running object detection on image or video.  
+
+
+
+
+{\ttfamily \#include $<$Y\+O\+L\+Ov3.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classYOLOv3_a2eda4ad08dd4943ed8fdab8483c5b521}{Y\+O\+L\+Ov3} ()
+\begin{DoxyCompactList}\small\item\em constructor for \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class with no parameters. \end{DoxyCompactList}\item 
+\hyperlink{classYOLOv3_a7fa8e4ed04b80302514c75eec94220de}{Y\+O\+L\+Ov3} (float conf\+Threshold\+Value, float nms\+Threshold\+Value, int input\+Width\+Value, int input\+Height\+Value)
+\begin{DoxyCompactList}\small\item\em constructor for \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class with four parameters. \end{DoxyCompactList}\item 
+void \hyperlink{classYOLOv3_ad1bcc51e21096d6b4610a7b2a1634d68}{set\+Conf\+Threshold} (float conf\+Threshold\+Value)
+\begin{DoxyCompactList}\small\item\em sets the conf\+Threshold value. \end{DoxyCompactList}\item 
+float \hyperlink{classYOLOv3_a7ccd356ee74387ce640dcce310f2fd47}{get\+Conf\+Threshold} ()
+\begin{DoxyCompactList}\small\item\em returns the conf\+Threshold value. \end{DoxyCompactList}\item 
+void \hyperlink{classYOLOv3_a7949ba1cf8826a84f6a26184af8ff60f}{set\+Nms\+Threshold} (float nms\+Threshold\+Value)
+\begin{DoxyCompactList}\small\item\em sets the nms\+Threshold value. \end{DoxyCompactList}\item 
+float \hyperlink{classYOLOv3_a0ce3f0b428061d48ed5d00b85ea56f3d}{get\+Nms\+Threshold} ()
+\begin{DoxyCompactList}\small\item\em returns the nms\+Threshold value. \end{DoxyCompactList}\item 
+void \hyperlink{classYOLOv3_a56194e004250946f94d78c4305a199ce}{set\+Input\+Width} (int input\+Width\+Value)
+\begin{DoxyCompactList}\small\item\em sets the input\+Width value. \end{DoxyCompactList}\item 
+int \hyperlink{classYOLOv3_aaa7ca5307930fe1423d68ad684d44539}{get\+Input\+Width} ()
+\begin{DoxyCompactList}\small\item\em returns the input\+Width value. \end{DoxyCompactList}\item 
+void \hyperlink{classYOLOv3_a483646bca9b48589123916bc4727e3b5}{set\+Input\+Height} (int input\+Height\+Value)
+\begin{DoxyCompactList}\small\item\em sets the input\+Height value. \end{DoxyCompactList}\item 
+int \hyperlink{classYOLOv3_a03485f1f4664f4ab1ea8f524c6075806}{get\+Input\+Height} ()
+\begin{DoxyCompactList}\small\item\em returns the input\+Height value. \end{DoxyCompactList}\item 
+cv\+::\+Mat \hyperlink{classYOLOv3_a0baf53526f6ddedd524cf87e6518bb3b}{preprocess} (const cv\+::\+Mat \&frame)
+\begin{DoxyCompactList}\small\item\em preprocessing of the input image. \end{DoxyCompactList}\item 
+std\+::vector$<$ cv\+::\+Mat $>$ \hyperlink{classYOLOv3_ae62f2a8bc6f9ddf55acdc65e64425cd8}{run} (const cv\+::\+Mat \&frame)
+\begin{DoxyCompactList}\small\item\em forward pass in \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} network. \end{DoxyCompactList}\item 
+void \hyperlink{classYOLOv3_a2cebf54d7ee457fcb9d1677e868ccc46}{postprocess} (const cv\+::\+Mat \&frame, std\+::vector$<$ cv\+::\+Mat $>$ \&outputs)
+\begin{DoxyCompactList}\small\item\em postprocessing of the output of yolov3 with nms algorithm. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classYOLOv3_a2dd63eddb7bad112c5533b8e0f6ea1e2}{get\+Output\+Layer\+Names} (const cv\+::dnn\+::\+Net \&net)
+\begin{DoxyCompactList}\small\item\em get names of output layers of the network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class responsible for running object detection on image or video. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{Y\+O\+L\+Ov3()}{YOLOv3()}}]{\setlength{\rightskip}{0pt plus 5cm}Y\+O\+L\+Ov3\+::\+Y\+O\+L\+Ov3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a2eda4ad08dd4943ed8fdab8483c5b521}{}\label{classYOLOv3_a2eda4ad08dd4943ed8fdab8483c5b521}
+
+
+constructor for \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class with no parameters. 
+
+\hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} constructor. \index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{Y\+O\+L\+Ov3(float conf\+Threshold\+Value, float nms\+Threshold\+Value, int input\+Width\+Value, int input\+Height\+Value)}{YOLOv3(float confThresholdValue, float nmsThresholdValue, int inputWidthValue, int inputHeightValue)}}]{\setlength{\rightskip}{0pt plus 5cm}Y\+O\+L\+Ov3\+::\+Y\+O\+L\+Ov3 (
+\begin{DoxyParamCaption}
+\item[{float}]{conf\+Threshold\+Value, }
+\item[{float}]{nms\+Threshold\+Value, }
+\item[{int}]{input\+Width\+Value, }
+\item[{int}]{input\+Height\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a7fa8e4ed04b80302514c75eec94220de}{}\label{classYOLOv3_a7fa8e4ed04b80302514c75eec94220de}
+
+
+constructor for \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class with four parameters. 
+
+\+: \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} constructor with four parameters. 
+
+\subsection{Member Function Documentation}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!get\+Conf\+Threshold@{get\+Conf\+Threshold}}
+\index{get\+Conf\+Threshold@{get\+Conf\+Threshold}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{get\+Conf\+Threshold()}{getConfThreshold()}}]{\setlength{\rightskip}{0pt plus 5cm}float Y\+O\+L\+Ov3\+::get\+Conf\+Threshold (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a7ccd356ee74387ce640dcce310f2fd47}{}\label{classYOLOv3_a7ccd356ee74387ce640dcce310f2fd47}
+
+
+returns the conf\+Threshold value. 
+
+\+: Get conf\+Threshold from \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class.
+
+\begin{DoxyReturn}{Returns}
+type float. 
+\end{DoxyReturn}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!get\+Input\+Height@{get\+Input\+Height}}
+\index{get\+Input\+Height@{get\+Input\+Height}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{get\+Input\+Height()}{getInputHeight()}}]{\setlength{\rightskip}{0pt plus 5cm}int Y\+O\+L\+Ov3\+::get\+Input\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a03485f1f4664f4ab1ea8f524c6075806}{}\label{classYOLOv3_a03485f1f4664f4ab1ea8f524c6075806}
+
+
+returns the input\+Height value. 
+
+\+: Get input\+Height from \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class.
+
+\begin{DoxyReturn}{Returns}
+type int. 
+\end{DoxyReturn}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!get\+Input\+Width@{get\+Input\+Width}}
+\index{get\+Input\+Width@{get\+Input\+Width}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{get\+Input\+Width()}{getInputWidth()}}]{\setlength{\rightskip}{0pt plus 5cm}int Y\+O\+L\+Ov3\+::get\+Input\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_aaa7ca5307930fe1423d68ad684d44539}{}\label{classYOLOv3_aaa7ca5307930fe1423d68ad684d44539}
+
+
+returns the input\+Width value. 
+
+\+: Get input\+Width from \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class.
+
+\begin{DoxyReturn}{Returns}
+type int. 
+\end{DoxyReturn}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!get\+Nms\+Threshold@{get\+Nms\+Threshold}}
+\index{get\+Nms\+Threshold@{get\+Nms\+Threshold}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{get\+Nms\+Threshold()}{getNmsThreshold()}}]{\setlength{\rightskip}{0pt plus 5cm}float Y\+O\+L\+Ov3\+::get\+Nms\+Threshold (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a0ce3f0b428061d48ed5d00b85ea56f3d}{}\label{classYOLOv3_a0ce3f0b428061d48ed5d00b85ea56f3d}
+
+
+returns the nms\+Threshold value. 
+
+\+: Get nms\+Threshold from \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class.
+
+\begin{DoxyReturn}{Returns}
+type float. 
+\end{DoxyReturn}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!get\+Output\+Layer\+Names@{get\+Output\+Layer\+Names}}
+\index{get\+Output\+Layer\+Names@{get\+Output\+Layer\+Names}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{get\+Output\+Layer\+Names(const cv\+::dnn\+::\+Net \&net)}{getOutputLayerNames(const cv::dnn::Net &net)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ Y\+O\+L\+Ov3\+::get\+Output\+Layer\+Names (
+\begin{DoxyParamCaption}
+\item[{const cv\+::dnn\+::\+Net \&}]{net}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a2dd63eddb7bad112c5533b8e0f6ea1e2}{}\label{classYOLOv3_a2dd63eddb7bad112c5533b8e0f6ea1e2}
+
+
+get names of output layers of the network. 
+
+\+: Get names/features of the output layers of the network.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em net} & It is the cv\+::dnn\+::net object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type std\+::vector$<$std\+::string$>$. 
+\end{DoxyReturn}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!postprocess@{postprocess}}
+\index{postprocess@{postprocess}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{postprocess(const cv\+::\+Mat \&frame, std\+::vector$<$ cv\+::\+Mat $>$ \&outputs)}{postprocess(const cv::Mat &frame, std::vector< cv::Mat > &outputs)}}]{\setlength{\rightskip}{0pt plus 5cm}void Y\+O\+L\+Ov3\+::postprocess (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{frame, }
+\item[{std\+::vector$<$ cv\+::\+Mat $>$ \&}]{outputs}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a2cebf54d7ee457fcb9d1677e868ccc46}{}\label{classYOLOv3_a2cebf54d7ee457fcb9d1677e868ccc46}
+
+
+postprocessing of the output of yolov3 with nms algorithm. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & It is the input image. \\
+\hline
+\mbox{\tt in}  & {\em outputs} & It is the outputs vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void.
+\end{DoxyReturn}
+Postprocessing of the output of yolov3 with nms algorithm. \index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!preprocess@{preprocess}}
+\index{preprocess@{preprocess}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{preprocess(const cv\+::\+Mat \&frame)}{preprocess(const cv::Mat &frame)}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Y\+O\+L\+Ov3\+::preprocess (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{frame}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a0baf53526f6ddedd524cf87e6518bb3b}{}\label{classYOLOv3_a0baf53526f6ddedd524cf87e6518bb3b}
+
+
+preprocessing of the input image. 
+
+\+: Preprocessing of the input image/video. Conversion to a
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & It is the input image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type cv\+::\+Mat.
+\end{DoxyReturn}
+\+: 4 Dimensional blob output \index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!run@{run}}
+\index{run@{run}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{run(const cv\+::\+Mat \&frame)}{run(const cv::Mat &frame)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ cv\+::\+Mat $>$ Y\+O\+L\+Ov3\+::run (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{frame}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_ae62f2a8bc6f9ddf55acdc65e64425cd8}{}\label{classYOLOv3_ae62f2a8bc6f9ddf55acdc65e64425cd8}
+
+
+forward pass in \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} network. 
+
+\+: Forward pass in \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} network.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & It is the input frame. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type vector$<$cv\+::\+Mat$>$. 
+\end{DoxyReturn}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!set\+Conf\+Threshold@{set\+Conf\+Threshold}}
+\index{set\+Conf\+Threshold@{set\+Conf\+Threshold}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{set\+Conf\+Threshold(float conf\+Threshold\+Value)}{setConfThreshold(float confThresholdValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Y\+O\+L\+Ov3\+::set\+Conf\+Threshold (
+\begin{DoxyParamCaption}
+\item[{float}]{conf\+Threshold\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_ad1bcc51e21096d6b4610a7b2a1634d68}{}\label{classYOLOv3_ad1bcc51e21096d6b4610a7b2a1634d68}
+
+
+sets the conf\+Threshold value. 
+
+\+: Set conf\+Threshold from \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em conf\+Threshold\+Value} & It is the conf\+Threshold value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!set\+Input\+Height@{set\+Input\+Height}}
+\index{set\+Input\+Height@{set\+Input\+Height}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{set\+Input\+Height(int input\+Height\+Value)}{setInputHeight(int inputHeightValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Y\+O\+L\+Ov3\+::set\+Input\+Height (
+\begin{DoxyParamCaption}
+\item[{int}]{input\+Height\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a483646bca9b48589123916bc4727e3b5}{}\label{classYOLOv3_a483646bca9b48589123916bc4727e3b5}
+
+
+sets the input\+Height value. 
+
+\+: Set input\+Height from \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em input\+Height\+Value} & It is the input\+Height value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!set\+Input\+Width@{set\+Input\+Width}}
+\index{set\+Input\+Width@{set\+Input\+Width}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{set\+Input\+Width(int input\+Width\+Value)}{setInputWidth(int inputWidthValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Y\+O\+L\+Ov3\+::set\+Input\+Width (
+\begin{DoxyParamCaption}
+\item[{int}]{input\+Width\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a56194e004250946f94d78c4305a199ce}{}\label{classYOLOv3_a56194e004250946f94d78c4305a199ce}
+
+
+sets the input\+Width value. 
+
+\+: Set input\+Width from \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Width\+Value} & It is the input\+Width value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+\index{Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}!set\+Nms\+Threshold@{set\+Nms\+Threshold}}
+\index{set\+Nms\+Threshold@{set\+Nms\+Threshold}!Y\+O\+L\+Ov3@{Y\+O\+L\+Ov3}}
+\subsubsection[{\texorpdfstring{set\+Nms\+Threshold(float nms\+Threshold\+Value)}{setNmsThreshold(float nmsThresholdValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Y\+O\+L\+Ov3\+::set\+Nms\+Threshold (
+\begin{DoxyParamCaption}
+\item[{float}]{nms\+Threshold\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classYOLOv3_a7949ba1cf8826a84f6a26184af8ff60f}{}\label{classYOLOv3_a7949ba1cf8826a84f6a26184af8ff60f}
+
+
+sets the nms\+Threshold value. 
+
+\+: Set nms\+Threshold from \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nms\+Threshold\+Value} & It is the nms\+Threshold value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Y\+O\+L\+Ov3.\+h\item 
+app/\hyperlink{YOLOv3_8cpp}{Y\+O\+L\+Ov3.\+cpp}\end{DoxyCompactItemize}

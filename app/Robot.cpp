@@ -1,12 +1,19 @@
-/**@Copyright (C) 2019 Arpit Aggarwal, Shantam Bajpai
+/**@copyright  MIT License (c) 2019 Arpit Aggarwal, Shantam Bajpai
  * @file        Robot.cpp
  * @author      Arpit Aggarwal, Shantam Bajpai
- * @date        10/11/2019
  * @brief       Implementation for Robot class.
  */
+<<<<<<< HEAD
 
 #include <Robot.h>
 #include <fstream>
+=======
+#include "Robot.h"
+#include <fstream>
+#include <opencv2/opencv.hpp>
+#include <opencv2/dnn/dnn.hpp>
+
+>>>>>>> 8b74738043b7ecfe61d873ba8cee4ab945010f54
 /**
  * Robot constructor.
  */

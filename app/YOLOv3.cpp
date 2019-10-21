@@ -1,12 +1,13 @@
-/**@Copyright (C) 2019 Arpit Aggarwal, Shantam Bajpai
+/**@copyright  MIT License (c) 2019 Arpit Aggarwal, Shantam Bajpai
  * @file        YOLOv3.cpp
  * @author      Arpit Aggarwal, Shantam Bajpai
- * @date        10/11/2019
  * @brief       Implementation for YOLOv3 class.
  */
 
-#include <YOLOv3.h>
+#include "YOLOv3.h"
 #include <iterator>
+#include <opencv2/opencv.hpp>
+#include <opencv2/dnn/dnn.hpp>
 
 /**
  * YOLOv3 constructor.
@@ -140,7 +141,6 @@ void YOLOv3::postprocess(const cv::Mat& frame, std::vector<cv::Mat>& outputs) {
             double confidences;
             matData = matData + (*it).cols;
             cv::Mat scores = (*it).row(row).colRange(5, (*it).cols);
-           
             cv::minMaxLoc(scores, 0, &confidences, 0, &detPoint);
             if (confidences > confThreshold) {
                 int centCoordinateX = static_cast<int>(matData[0] * frame.cols);
