@@ -6,7 +6,7 @@
  */
 
 #include <Robot.h>
-
+#include <fstream>
 /**
  * Robot constructor.
  */

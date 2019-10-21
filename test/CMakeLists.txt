@@ -3,7 +3,9 @@ set(GTEST_SHUFFLE 1)
 add_executable(
     cpp-test
     main.cpp
-    test.cpp
+    MockUtils.cpp
+    MockYOLOv3.cpp
+    MockRobot.cpp
     ${CMAKE_SOURCE_DIR}/app/YOLOv3.cpp
     ${CMAKE_SOURCE_DIR}/app/Utils.cpp
     ${CMAKE_SOURCE_DIR}/app/Robot.cpp
