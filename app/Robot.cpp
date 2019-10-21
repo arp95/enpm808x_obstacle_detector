@@ -4,6 +4,7 @@
  * @brief       Implementation for Robot class.
  */
 #include "Robot.h"
+#include <fstream>
 #include <opencv2/opencv.hpp>
 #include <opencv2/dnn/dnn.hpp>
 
