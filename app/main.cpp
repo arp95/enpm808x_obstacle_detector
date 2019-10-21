@@ -10,7 +10,9 @@
 
 // keys It is used for showing parsing examples.
 const char* keys =
-"{help h usage ? | | Usage examples: \n\t\t./object_detection_yolo.out --image=dog.jpg \n\t\t./object_detection_yolo.out --video=run_sm.mp4}"
+"{help h usage ? | | Usage examples: \n\t\t."
+"/object_detection_yolo.out --image=dog.jpg \n\t\t."
+"/object_detection_yolo.out --video=run_sm.mp4}"
 "{image i        |<none>| input image   }"
 "{video v       |<none>| input video   }";
 
@@ -24,7 +26,8 @@ int main(int argc, char** argv) {
     } else if (state == 1) {
         robot.processVideo();
     } else {
-        std::cout << "Please provide either an imagepath or a videopath!" << std::endl;
+        std::cout << "Please provide either an "
+"imagepath or a videopath!" << std::endl;
     }
     return 0;
 }

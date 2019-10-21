@@ -22,7 +22,15 @@ void \hyperlink{classRobot_ad92bd0b6855a8579c7e230ddaddbc598}{set\+Is\+Video} (b
 \begin{DoxyCompactList}\small\item\em Sets the is\+Video value. \end{DoxyCompactList}\item 
 bool \hyperlink{classRobot_a4a37b5e8cb83c89c7e2c180ca9937b17}{get\+Is\+Video} ()
 \begin{DoxyCompactList}\small\item\em returns the is\+Video value. \end{DoxyCompactList}\item 
-void \hyperlink{classRobot_a3a2bc11a8ef019a4bae354bc3ac0de86}{check\+Parser} (cv\+::\+Command\+Line\+Parser parser)
+std\+::string \hyperlink{classRobot_a294235e89dc45aadcf604a2b028b36bd}{get\+Video\+Path} ()
+\begin{DoxyCompactList}\small\item\em returns the video\+Path value. \end{DoxyCompactList}\item 
+void \hyperlink{classRobot_ac0d675fbcf6c76307173e95b04b983b0}{set\+Video\+Path} (std\+::string video\+Path\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the video\+Path value. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classRobot_a5d07f2808f6ab48c0b66061b7518c64b}{get\+Image\+Path} ()
+\begin{DoxyCompactList}\small\item\em returns the image\+Path value. \end{DoxyCompactList}\item 
+void \hyperlink{classRobot_a1ce5020b8a988df7a48b5c10aa93bcaf}{set\+Image\+Path} (std\+::string image\+Path\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the image\+Path value. \end{DoxyCompactList}\item 
+int \hyperlink{classRobot_a76d8a5f933040b1c7835de9ee8e50856}{check\+Parser} (cv\+::\+Command\+Line\+Parser parser)
 \begin{DoxyCompactList}\small\item\em updates is\+Video and is\+Image values. \end{DoxyCompactList}\item 
 void \hyperlink{classRobot_a069bd7ac190af21faaeebae6a26ac340}{process\+Image} ()
 \begin{DoxyCompactList}\small\item\em processes the image and updates the image with bounding boxes. \end{DoxyCompactList}\item 
@@ -50,11 +58,11 @@ constructor for \hyperlink{classRobot}{Robot} class with no parameters.
 \subsection{Member Function Documentation}
 \index{Robot@{Robot}!check\+Parser@{check\+Parser}}
 \index{check\+Parser@{check\+Parser}!Robot@{Robot}}
-\subsubsection[{\texorpdfstring{check\+Parser(cv\+::\+Command\+Line\+Parser parser)}{checkParser(cv::CommandLineParser parser)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::check\+Parser (
+\subsubsection[{\texorpdfstring{check\+Parser(cv\+::\+Command\+Line\+Parser parser)}{checkParser(cv::CommandLineParser parser)}}]{\setlength{\rightskip}{0pt plus 5cm}int Robot\+::check\+Parser (
 \begin{DoxyParamCaption}
 \item[{cv\+::\+Command\+Line\+Parser}]{parser}
 \end{DoxyParamCaption}
-)}\hypertarget{classRobot_a3a2bc11a8ef019a4bae354bc3ac0de86}{}\label{classRobot_a3a2bc11a8ef019a4bae354bc3ac0de86}
+)}\hypertarget{classRobot_a76d8a5f933040b1c7835de9ee8e50856}{}\label{classRobot_a76d8a5f933040b1c7835de9ee8e50856}
 
 
 updates is\+Video and is\+Image values. 
@@ -67,7 +75,23 @@ updates is\+Video and is\+Image values.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-type void. 
+type int. 
+\end{DoxyReturn}
+\index{Robot@{Robot}!get\+Image\+Path@{get\+Image\+Path}}
+\index{get\+Image\+Path@{get\+Image\+Path}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{get\+Image\+Path()}{getImagePath()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Robot\+::get\+Image\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_a5d07f2808f6ab48c0b66061b7518c64b}{}\label{classRobot_a5d07f2808f6ab48c0b66061b7518c64b}
+
+
+returns the image\+Path value. 
+
+\+: Returns the image\+Path value.
+
+\begin{DoxyReturn}{Returns}
+type std\+::string. 
 \end{DoxyReturn}
 \index{Robot@{Robot}!get\+Is\+Image@{get\+Is\+Image}}
 \index{get\+Is\+Image@{get\+Is\+Image}!Robot@{Robot}}
@@ -101,6 +125,22 @@ returns the is\+Video value.
 \begin{DoxyReturn}{Returns}
 type bool. 
 \end{DoxyReturn}
+\index{Robot@{Robot}!get\+Video\+Path@{get\+Video\+Path}}
+\index{get\+Video\+Path@{get\+Video\+Path}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{get\+Video\+Path()}{getVideoPath()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Robot\+::get\+Video\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_a294235e89dc45aadcf604a2b028b36bd}{}\label{classRobot_a294235e89dc45aadcf604a2b028b36bd}
+
+
+returns the video\+Path value. 
+
+\+: Returns the video\+Path value.
+
+\begin{DoxyReturn}{Returns}
+type std\+::string. 
+\end{DoxyReturn}
 \index{Robot@{Robot}!process\+Image@{process\+Image}}
 \index{process\+Image@{process\+Image}!Robot@{Robot}}
 \subsubsection[{\texorpdfstring{process\+Image()}{processImage()}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::process\+Image (
@@ -130,6 +170,27 @@ processes the video and updates the video frames with bounding boxes.
 
 \+: Processes the video and updates the video frames with bounding boxes.
 
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+\index{Robot@{Robot}!set\+Image\+Path@{set\+Image\+Path}}
+\index{set\+Image\+Path@{set\+Image\+Path}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{set\+Image\+Path(std\+::string image\+Path\+Value)}{setImagePath(std::string imagePathValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::set\+Image\+Path (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{image\+Path\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_a1ce5020b8a988df7a48b5c10aa93bcaf}{}\label{classRobot_a1ce5020b8a988df7a48b5c10aa93bcaf}
+
+
+Sets the image\+Path value. 
+
+\+: Sets the image\+Path value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em image\+Path\+Value} & It is a variable that sets image\+Path value. \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 type void. 
 \end{DoxyReturn}
@@ -170,6 +231,27 @@ Sets the is\+Video value.
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\tt in}  & {\em is\+Video\+Value} & It is a variable that tells whether it is an video or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type void. 
+\end{DoxyReturn}
+\index{Robot@{Robot}!set\+Video\+Path@{set\+Video\+Path}}
+\index{set\+Video\+Path@{set\+Video\+Path}!Robot@{Robot}}
+\subsubsection[{\texorpdfstring{set\+Video\+Path(std\+::string video\+Path\+Value)}{setVideoPath(std::string videoPathValue)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+::set\+Video\+Path (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{video\+Path\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobot_ac0d675fbcf6c76307173e95b04b983b0}{}\label{classRobot_ac0d675fbcf6c76307173e95b04b983b0}
+
+
+Sets the video\+Path value. 
+
+\+: Sets the video\+Path value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em video\+Path\+Value} & It is a variable that sets video\+Path value. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

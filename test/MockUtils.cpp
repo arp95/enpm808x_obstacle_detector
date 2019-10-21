@@ -7,7 +7,6 @@
  * @version 1.0
  *
  */
-
 #include <gtest/gtest.h>
 #include "Utils.h"
 
@@ -51,9 +50,8 @@ TEST(checkUtilsGetterSetter, checkClassesSize) {
  * @brief Test case for addClasses method of Utils class.
  */
 TEST(checkAddClasses, checkForCorrectInput) {
-  EXPECT_NO_FATAL_FAILURE( {
-    util.addClasses()
-    ;
+  EXPECT_NO_FATAL_FAILURE({
+    util.addClasses();
   });
 }
 

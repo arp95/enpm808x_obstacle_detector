@@ -108,7 +108,8 @@ void Robot::processImage() {
         cv::VideoCapture capture;
         std::string outputFile;
         capture.open(imagePath);
-        imagePath.replace(imagePath.end() - 4, imagePath.end(), "_yolov3_output.jpg");
+        imagePath.replace(imagePath.end() - 4,
+imagePath.end(), "_yolov3_output.jpg");
         outputFile = imagePath;
 
         // perform analysis
@@ -143,9 +144,13 @@ void Robot::processVideo() {
         cv::VideoWriter outputVideo;
         std::string outputFile;
         capture.open(videoPath);
-        videoPath.replace(videoPath.end() - 4, videoPath.end(), "_yolov3_output.avi");
+        videoPath.replace(videoPath.end() - 4,
+videoPath.end(), "_yolov3_output.avi");
         outputFile = videoPath;
-        outputVideo.open(outputFile, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), 28, cv::Size(capture.get(cv::CAP_PROP_FRAME_WIDTH), capture.get(cv::CAP_PROP_FRAME_HEIGHT)));
+        outputVideo.open(outputFile,
+cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), 28,
+cv::Size(capture.get(cv::CAP_PROP_FRAME_WIDTH),
+capture.get(cv::CAP_PROP_FRAME_HEIGHT)));
         while (1) {
             // perform analysis
             capture >> frame;

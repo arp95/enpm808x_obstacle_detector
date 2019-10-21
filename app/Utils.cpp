@@ -6,7 +6,6 @@
 
 #include <fstream>
 #include "Utils.h"
-#include <fstream>
 #include <opencv2/opencv.hpp>
 
 /**
@@ -81,19 +80,27 @@ std::vector<std::string> Utils::getClasses() {
 /**
  * Draws bounding box given the coordinates.
  */
-void Utils::drawBoundingBox(int classId, double confidence, int left, int top, int right, int bottom, const cv::Mat & frame) {
+void Utils::drawBoundingBox(int classId, double confidence,
+int left, int top, int right, int bottom, const cv::Mat & frame) {
     // function to draw a rectangle in the image given the coordinates
-    cv::rectangle(frame, cv::Point(left, top), cv::Point(right, bottom), cv::Scalar(255, 180, 60), 3);
+    cv::rectangle(frame, cv::Point(left, top),
+cv::Point(right, bottom), cv::Scalar(255, 180, 60), 3);
     // get class label from classes vector
     std::string classLabel = cv::format("%.2f", confidence);
     classLabel = classes[classId] + ":" + classLabel;
 
     // put information on image
     int base;
-  cv::Size labelSize = cv::getTextSize(classLabel, cv::FONT_HERSHEY_DUPLEX, 0.5, 1, &base);
+  cv::Size labelSize = cv::getTextSize(classLabel,
+cv::FONT_HERSHEY_DUPLEX, 0.5, 1, &base);
     top = std::max(top, labelSize.height);
-    cv::rectangle(frame, cv::Point(left, top - round(1.5 * labelSize.height)), cv::Point(left + round(1.5 * labelSize.width), top + base), cv::Scalar(255, 255, 255), cv::FILLED);
-    cv::putText(frame, classLabel, cv::Point(left, top), cv::FONT_HERSHEY_DUPLEX, 0.75, cv::Scalar(0, 0, 0), 1);
+    cv::rectangle(frame, cv::Point(left,
+top - round(1.5 * labelSize.height)),
+cv::Point(left + round(1.5 * labelSize.width), top + base),
+cv::Scalar(255, 255, 255), cv::FILLED);
+    cv::putText(frame, classLabel,
+cv::Point(left, top), cv::FONT_HERSHEY_DUPLEX, 0.75,
+cv::Scalar(0, 0, 0), 1);
 }
 
 /**

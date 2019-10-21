@@ -54,7 +54,8 @@ class Utils {
    * @param[in] classesFileValue It is the classes filepath.
    * @return type void.
    */
-  void setClassesFile(const std::string classesFileValue);
+  void setClassesFile(const std::string
+classesFileValue);
 
   /**
    * @brief returns the modelConfiguration value.
@@ -105,7 +106,8 @@ class Utils {
    * @param[in] frame It refers to the input image.
    * @return type void.
    */
-  void drawBoundingBox(int classId, double confidence, int left, int top, int right, int bottom, const cv::Mat & frame);
+  void drawBoundingBox(int classId, double confidence,
+int left, int top, int right, int bottom, const cv::Mat & frame);
 
   /*
    * @brief: Destructor for class Utils

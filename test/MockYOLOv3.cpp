@@ -7,7 +7,6 @@
  * @version 1.0
  *
  */
-
 #include <gtest/gtest.h>
 #include <opencv2/opencv.hpp>
 #include <opencv2/dnn/dnn.hpp>

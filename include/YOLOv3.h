@@ -53,7 +53,8 @@ class YOLOv3 {
   /**
    * @brief  constructor for YOLOv3 class with four parameters.
    */
-  YOLOv3(float confThresholdValue, float nmsThresholdValue, int inputWidthValue, int inputHeightValue);
+  YOLOv3(float confThresholdValue, float nmsThresholdValue,
+int inputWidthValue, int inputHeightValue);
 
   /**
    * @brief sets the confThreshold value.

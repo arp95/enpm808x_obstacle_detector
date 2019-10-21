@@ -1,0 +1,74 @@
+\hypertarget{MockYOLOv3_8cpp}{}\section{test/\+Mock\+Y\+O\+L\+Ov3.cpp File Reference}
+\label{MockYOLOv3_8cpp}\index{test/\+Mock\+Y\+O\+L\+Ov3.\+cpp@{test/\+Mock\+Y\+O\+L\+Ov3.\+cpp}}
+
+
+Solitary Test source file for testing the \hyperlink{classRobot}{Robot} class methods. Includes all the required headers.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/dnn/dnn.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}Y\+O\+L\+Ov3.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Utils.\+h\char`\"{}}\\*
+Include dependency graph for Mock\+Y\+O\+L\+Ov3.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MockYOLOv3_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{MockYOLOv3_8cpp_a0b848d6666a4624da2e5e0f8029d4973}{T\+E\+ST} (check\+Getter\+Setter, check\+Conf\+Threshold)\hypertarget{MockYOLOv3_8cpp_a0b848d6666a4624da2e5e0f8029d4973}{}\label{MockYOLOv3_8cpp_a0b848d6666a4624da2e5e0f8029d4973}
+
+\begin{DoxyCompactList}\small\item\em Test case for set\+Conf\+Threshold method of \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class. The test checks whether value set for confidence is same as the value input by the get\+Conf\+Threshold method. \end{DoxyCompactList}\item 
+\hyperlink{MockYOLOv3_8cpp_a6f78ab2ce61f7fa291249adb64025820}{T\+E\+ST} (check\+Getter\+Setter, checknms\+Threshold)\hypertarget{MockYOLOv3_8cpp_a6f78ab2ce61f7fa291249adb64025820}{}\label{MockYOLOv3_8cpp_a6f78ab2ce61f7fa291249adb64025820}
+
+\begin{DoxyCompactList}\small\item\em Test case for set\+Nms\+Threshold method of \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class. The test checks whether value set for nms\+Threshold is same as the value input by the get\+Nms\+Threshold method. \end{DoxyCompactList}\item 
+\hyperlink{MockYOLOv3_8cpp_aba73f69ee75344002bf0a0fc6dea04e1}{T\+E\+ST} (check\+Getter\+Setter, check\+Input\+Width)\hypertarget{MockYOLOv3_8cpp_aba73f69ee75344002bf0a0fc6dea04e1}{}\label{MockYOLOv3_8cpp_aba73f69ee75344002bf0a0fc6dea04e1}
+
+\begin{DoxyCompactList}\small\item\em Test case for set\+Input\+Width method of \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class. The test checks whether value set for Input\+Width is same as the value input by the get\+Input\+Width method. \end{DoxyCompactList}\item 
+\hyperlink{MockYOLOv3_8cpp_a1d01c4edb3583b9a309a5770c4b86992}{T\+E\+ST} (check\+Getter\+Setter, check\+Input\+Height)\hypertarget{MockYOLOv3_8cpp_a1d01c4edb3583b9a309a5770c4b86992}{}\label{MockYOLOv3_8cpp_a1d01c4edb3583b9a309a5770c4b86992}
+
+\begin{DoxyCompactList}\small\item\em Test case for set\+Input\+Height method of \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class. The test checks whether value set for Input\+Height is same as the value input by the get\+Input\+Height method. \end{DoxyCompactList}\item 
+\hyperlink{MockYOLOv3_8cpp_a6aec8c96bce7776870ed5ac43aef1722}{T\+E\+ST} (check\+Pre\+Process, input\+Frames)\hypertarget{MockYOLOv3_8cpp_a6aec8c96bce7776870ed5ac43aef1722}{}\label{MockYOLOv3_8cpp_a6aec8c96bce7776870ed5ac43aef1722}
+
+\begin{DoxyCompactList}\small\item\em Test case for preprocess method. Checks for any fatal error. \end{DoxyCompactList}\item 
+\hyperlink{MockYOLOv3_8cpp_ac9b5cf666d1e86bde86664ce3a75895f}{T\+E\+ST} (check\+Run, input\+Frames)\hypertarget{MockYOLOv3_8cpp_ac9b5cf666d1e86bde86664ce3a75895f}{}\label{MockYOLOv3_8cpp_ac9b5cf666d1e86bde86664ce3a75895f}
+
+\begin{DoxyCompactList}\small\item\em Test case for run method. Checks for any fatal error. \end{DoxyCompactList}\item 
+\hyperlink{MockYOLOv3_8cpp_a542216c56445f34f77b97a5b0153ba10}{T\+E\+ST} (check\+Post\+Process, input\+Frames)\hypertarget{MockYOLOv3_8cpp_a542216c56445f34f77b97a5b0153ba10}{}\label{MockYOLOv3_8cpp_a542216c56445f34f77b97a5b0153ba10}
+
+\begin{DoxyCompactList}\small\item\em Test case for postprocess method. Checks for any fatal error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} {\bfseries yolov31}\hypertarget{MockYOLOv3_8cpp_ad8cd8407fa52b5cb6634c5abeba68f55}{}\label{MockYOLOv3_8cpp_ad8cd8407fa52b5cb6634c5abeba68f55}
+
+\item 
+\hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} {\bfseries yolov32} (0.\+5, 0.\+4, 416, 416)\hypertarget{MockYOLOv3_8cpp_a5ceaea5d744e77185425609a3e349120}{}\label{MockYOLOv3_8cpp_a5ceaea5d744e77185425609a3e349120}
+
+\item 
+double {\bfseries val} = 2\hypertarget{MockYOLOv3_8cpp_a3c8bc0bb4f045bfe78d1196cb786792c}{}\label{MockYOLOv3_8cpp_a3c8bc0bb4f045bfe78d1196cb786792c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Solitary Test source file for testing the \hyperlink{classRobot}{Robot} class methods. Includes all the required headers. 
+
+Solitary Test source file for testing the \hyperlink{classYOLOv3}{Y\+O\+L\+Ov3} class methods. Includes all the required headers.
+
+Solitary Test source file for testing the \hyperlink{classUtils}{Utils} class methods.\+Includes all the required headers.
+
+\begin{DoxyCopyright}{Copyright}
+M\+IT License (c) 2019 Shantam Bajpai and Arpit Aggarwal
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+Shantam Bajpai and Arpit Aggarwal 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['robot',['Robot',['../classRobot.html',1,'Robot'],['../classRobot.html#a4fc7c70ae20623f05e06f2ecb388b6c4',1,'Robot::Robot()']]],
-  ['robot_2ecpp',['Robot.cpp',['../Robot_8cpp.html',1,'']]],
-  ['run',['run',['../classYOLOv3.html#ae62f2a8bc6f9ddf55acdc65e64425cd8',1,'YOLOv3']]]
+  ['postprocess',['postprocess',['../classYOLOv3.html#a2cebf54d7ee457fcb9d1677e868ccc46',1,'YOLOv3']]],
+  ['preprocess',['preprocess',['../classYOLOv3.html#a0baf53526f6ddedd524cf87e6518bb3b',1,'YOLOv3']]],
+  ['processimage',['processImage',['../classRobot.html#a069bd7ac190af21faaeebae6a26ac340',1,'Robot']]],
+  ['processvideo',['processVideo',['../classRobot.html#ab06570394ae53dae4fe351598081ba68',1,'Robot']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7eutils',['~Utils',['../classUtils.html#afa5e70facffc286607498e7edb639b8a',1,'Utils']]]
+  ['yolov3',['YOLOv3',['../classYOLOv3.html',1,'YOLOv3'],['../classYOLOv3.html#a2eda4ad08dd4943ed8fdab8483c5b521',1,'YOLOv3::YOLOv3()'],['../classYOLOv3.html#a7fa8e4ed04b80302514c75eec94220de',1,'YOLOv3::YOLOv3(float confThresholdValue, float nmsThresholdValue, int inputWidthValue, int inputHeightValue)']]],
+  ['yolov3_2ecpp',['YOLOv3.cpp',['../YOLOv3_8cpp.html',1,'']]]
 ];

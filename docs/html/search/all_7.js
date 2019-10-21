@@ -1,5 +1,14 @@
 var searchData=
 [
-  ['test',['TEST',['../test_8cpp.html#a0b848d6666a4624da2e5e0f8029d4973',1,'TEST(checkGetterSetter, checkConfThreshold):&#160;test.cpp'],['../test_8cpp.html#a6f78ab2ce61f7fa291249adb64025820',1,'TEST(checkGetterSetter, checknmsThreshold):&#160;test.cpp'],['../test_8cpp.html#aba73f69ee75344002bf0a0fc6dea04e1',1,'TEST(checkGetterSetter, checkInputWidth):&#160;test.cpp'],['../test_8cpp.html#a1d01c4edb3583b9a309a5770c4b86992',1,'TEST(checkGetterSetter, checkInputHeight):&#160;test.cpp'],['../test_8cpp.html#a96de787502b2f7a44975352c13ed6ad2',1,'TEST(checkBoolSetterGetter, checkIsImage):&#160;test.cpp'],['../test_8cpp.html#a9370048ababfebd67204034105355f66',1,'TEST(checkBoolSetterGetter, checkIsVideo):&#160;test.cpp'],['../test_8cpp.html#a704dabe6e3b7562d3c36e861b4a17e8f',1,'TEST(checkUtilsGetterSetter, checkClassesFile):&#160;test.cpp'],['../test_8cpp.html#ac18307310647ab7131ca17dc72a93cf8',1,'TEST(checkUtilsGetterSetter, checkModelConfigurationFile):&#160;test.cpp'],['../test_8cpp.html#a06c1bda2499fc01d2fab12602d7cf45c',1,'TEST(checkUtilsGetterSetter, checkModelWeightsFile):&#160;test.cpp'],['../test_8cpp.html#a9b264885c85701d7b435738d0758206c',1,'TEST(checkUtilsGetterSetter, checkClassesSize):&#160;test.cpp']]],
-  ['test_2ecpp',['test.cpp',['../test_8cpp.html',1,'']]]
+  ['setclassesfile',['setClassesFile',['../classUtils.html#aaa5247cba2b0914b353a1ecd7c41b071',1,'Utils']]],
+  ['setconfthreshold',['setConfThreshold',['../classYOLOv3.html#ad1bcc51e21096d6b4610a7b2a1634d68',1,'YOLOv3']]],
+  ['setimagepath',['setImagePath',['../classRobot.html#a1ce5020b8a988df7a48b5c10aa93bcaf',1,'Robot']]],
+  ['setinputheight',['setInputHeight',['../classYOLOv3.html#a483646bca9b48589123916bc4727e3b5',1,'YOLOv3']]],
+  ['setinputwidth',['setInputWidth',['../classYOLOv3.html#a56194e004250946f94d78c4305a199ce',1,'YOLOv3']]],
+  ['setisimage',['setIsImage',['../classRobot.html#a781858a767a786b864c7f1fc78721524',1,'Robot']]],
+  ['setisvideo',['setIsVideo',['../classRobot.html#ad92bd0b6855a8579c7e230ddaddbc598',1,'Robot']]],
+  ['setmodelconfiguration',['setModelConfiguration',['../classUtils.html#a9b7fb4c851538e0c28fda156a15fa747',1,'Utils']]],
+  ['setmodelweights',['setModelWeights',['../classUtils.html#a48527a6263a05121fdc8780111f1200d',1,'Utils']]],
+  ['setnmsthreshold',['setNmsThreshold',['../classYOLOv3.html#a7949ba1cf8826a84f6a26184af8ff60f',1,'YOLOv3']]],
+  ['setvideopath',['setVideoPath',['../classRobot.html#ac0d675fbcf6c76307173e95b04b983b0',1,'Robot']]]
 ];
