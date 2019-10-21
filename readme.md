@@ -21,7 +21,10 @@ The YOLOv3 object detector algorithm has been used for this on a pre-trained COC
 3. After the output is obtained it will be passed for postprocessing and the anchor boxes with low confidence scores will be suppressed using non max suppresion.
 
 ## Output of the Project 
-### Image Output and Video Screenshot output
+### Image Output 
+![sample_yolov3_output](https://user-images.githubusercontent.com/51986101/67234084-715cb300-f412-11e9-924f-c180de45c640.jpg)
+
+### Video output Screenshot
 ![Video output Screenshot](https://user-images.githubusercontent.com/51986101/67233060-8a646480-f410-11e9-9037-d19de4808f3a.png) 
 
 ## Dependencies
