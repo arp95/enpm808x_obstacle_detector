@@ -4,15 +4,11 @@
  * @brief       Implementation for Utils class.
  */
 
-<<<<<<< HEAD
-#include <Utils.h>
 #include <fstream>
-=======
 #include "Utils.h"
 #include <fstream>
 #include <opencv2/opencv.hpp>
 
->>>>>>> 8b74738043b7ecfe61d873ba8cee4ab945010f54
 /**
  * Utils constructor.
  */
