@@ -18,11 +18,13 @@ int main(int argc, char** argv) {
     // run main code
     cv::CommandLineParser parser(argc, argv, keys);
     Robot robot;
-    robot.checkParser(parser);
-    if (robot.getIsImage()) {
+    int state = robot.checkParser(parser);
+    if (state == 0) {
         robot.processImage();
-    } else {
+    } else if (state == 1) {
         robot.processVideo();
+    } else {
+        std::cout << "Please provide either an imagepath or a videopath!" << std::endl;
     }
     return 0;
 }

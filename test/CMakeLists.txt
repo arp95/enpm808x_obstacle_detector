@@ -9,6 +9,7 @@ add_executable(
     ${CMAKE_SOURCE_DIR}/app/YOLOv3.cpp
     ${CMAKE_SOURCE_DIR}/app/Utils.cpp
     ${CMAKE_SOURCE_DIR}/app/Robot.cpp
+    ${OpenCV_INCLUDE_DIRS}
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 

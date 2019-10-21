@@ -76,9 +76,9 @@ class Robot {
   /**
    * @brief updates isVideo and isImage values.
    * @param[in] parser It containes information about the imagepath and videopath.
-   * @return type void.
+   * @return type int.
    */
-  void checkParser(cv::CommandLineParser parser);
+  int checkParser(cv::CommandLineParser parser);
 
   /**
    * @brief processes the image and updates the image with bounding boxes.

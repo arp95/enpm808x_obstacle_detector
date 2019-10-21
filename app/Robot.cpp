@@ -51,13 +51,17 @@ bool Robot::getIsVideo() {
 /**
  * @brief: Updates the isVideo and isImage value and sets the imagePath and videoPath.
  */
-void Robot::checkParser(cv::CommandLineParser parser) {
+int Robot::checkParser(cv::CommandLineParser parser) {
     if (parser.has("image")) {
         isImage = 1;
         imagePath = parser.get<std::string>("image");
+        return 0;
     } else if (parser.has("video")) {
         isVideo = 1;
         videoPath = parser.get<std::string>("video");
+        return 1;
+    } else {
+        return -1;
     }
 }
 

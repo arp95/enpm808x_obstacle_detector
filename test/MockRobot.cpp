@@ -1,26 +1,31 @@
 /**
- * Copyright 2019 Shantam Bajpai and Arpit Aggarwal
+ * @copyright  MIT License (c) 2019 Shantam Bajpai and Arpit Aggarwal
  * @file  MockYOLOv3.cpp
  * @brief Solitary Test source file for testing the Robot
  *        class methods. Includes all the required headers
  * @author Shantam Bajpai and Arpit Aggarwal
- * @date  13th October 2019
  * @version 1.0
  *
  */
 
 #include <gtest/gtest.h>
-#include <Robot.h>
+#include <opencv2/opencv.hpp>
+#include "Robot.h"
 
-Robot robo;
+// keys It is used for showing parsing examples.
+const char* keys =
+"{help h usage ? | | Usage examples: \n\t\t./object_detection_yolo.out --image=dog.jpg \n\t\t./object_detection_yolo.out --video=run_sm.mp4}"
+"{image i        |<none>| input image   }"
+"{video v       |<none>| input video   }";
+Robot robot;
 
 /**
  * @brief Test case for getIsImage method of Robot class. The
  * test checks whether the boolean value for getIsImage method.
  */
 TEST(checkBoolSetterGetter, checkIsImage) {
-  robo.setIsImage(0);
-  EXPECT_EQ(robo.getIsImage(), 0);
+  robot.setIsImage(0);
+  EXPECT_EQ(robot.getIsImage(), 0);
 }
 
 /**
@@ -28,41 +33,47 @@ TEST(checkBoolSetterGetter, checkIsImage) {
  * test checks whether the boolean value for getIsImage method.
  */
 TEST(checkBoolSetterGetter, checkIsVideo) {
-  robo.setIsVideo(1);
-  EXPECT_EQ(robo.getIsVideo(), 1);
+  robot.setIsVideo(1);
+  EXPECT_EQ(robot.getIsVideo(), 1);
+}
+
+/**
+ * @brief Test case for checkParser method of Robot class.
+ */
+TEST(checkBoolSetterGetter, checkParser) {
+  int argc = 0;
+  const char *argv = "";
+  cv::CommandLineParser parser(argc, &argv, keys);
+  EXPECT_EQ(robot.checkParser(parser), -1);
 }
 
 /**
  * @brief Test case for processImage method of Robot class. The
- * test verifies that processImage doesnot throw an exception.
+ * test verifies that processImage doesnt throw an exception.
  */
 
 TEST(checkProcessImage, noExceptionThrown) {
   EXPECT_NO_THROW( {
-    robo.processImage()
+    robot.processImage()
     ;
-  }
-);
+  });
     EXPECT_NO_FATAL_FAILURE( {
-    robo.processImage()
+    robot.processImage()
     ;
-  }
-);
+  });
 }
+
 /**
  * @brief Test case for processVideo method of Robot class. The
- * test verifies that processVideo doesnot throw an exception.
+ * test verifies that processVideo doesnt throw an exception.
  */
-
 TEST(checkProcessVideo, noExceptionThrown) {
-EXPECT_NO_THROW( {
-  robo.processVideo()
-  ;
-}
-);
-EXPECT_NO_FATAL_FAILURE( {
-  robo.processVideo()
-  ;
-}
-);
+  EXPECT_NO_THROW( {
+    robot.processVideo()
+    ;
+  });
+  EXPECT_NO_FATAL_FAILURE( {
+    robot.processVideo()
+    ;
+  });
 }
