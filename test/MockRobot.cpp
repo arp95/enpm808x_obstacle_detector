@@ -43,8 +43,12 @@ TEST(checkProcessImage, noExceptionThrown) {
     ;
   }
 );
+    EXPECT_NO_FATAL_FAILURE( {
+    robo.processImage()
+    ;
+  }
+);
 }
-
 /**
  * @brief Test case for processVideo method of Robot class. The
  * test verifies that processVideo doesnot throw an exception.
@@ -53,6 +57,11 @@ TEST(checkProcessImage, noExceptionThrown) {
 TEST(checkProcessVideo, noExceptionThrown) {
 EXPECT_NO_THROW( {
   robo.processVideo()
+  ;
+}
+);
+EXPECT_NO_FATAL_FAILURE( {
+  robo.processImage()
   ;
 }
 );
