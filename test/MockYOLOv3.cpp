@@ -9,7 +9,10 @@
  */
 
 #include <gtest/gtest.h>
+#include <opencv2/opencv.hpp>
+#include <opencv2/dnn/dnn.hpp>
 #include "YOLOv3.h"
+#include "Utils.h"
 
 YOLOv3 yolov31;
 YOLOv3 yolov32(0.5, 0.4, 416, 416);
@@ -70,9 +73,9 @@ TEST(checkPreProcess, inputFrames) {
  */
 TEST(checkRun, inputFrames) {
   cv::Mat frame = cv::imread("../sample.jpg");
-  yolov31.preprocess(frame);
+  cv::Mat blob = yolov31.preprocess(frame);
   EXPECT_NO_FATAL_FAILURE({
-    std::vector<cv::Mat> outputs = yolov31.run(frame);
+    std::vector<cv::Mat> outputs = yolov31.run(blob);
   });
 }
 
@@ -81,8 +84,8 @@ TEST(checkRun, inputFrames) {
  */
 TEST(checkPostProcess , inputFrames) {
   cv::Mat frame = cv::imread("../sample.jpg");
-  yolov31.preprocess(frame);
-  std::vector<cv::Mat> outputs = yolov31.run(frame);
+  cv::Mat blob = yolov31.preprocess(frame);
+  std::vector<cv::Mat> outputs = yolov31.run(blob);
   EXPECT_NO_FATAL_FAILURE({
     yolov31.postprocess(frame, outputs);
   });
